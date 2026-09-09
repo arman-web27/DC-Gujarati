@@ -27,7 +27,7 @@
     --font-display:'Halant', 'Noto Sans Devanagari', serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth; scroll-padding-top:16px;}
   body{
     font-family:var(--font-display);
     background:#DDD6C4;
@@ -610,7 +610,7 @@
     position:fixed;
     left:50%;
     bottom:14px;
-    transform:translateX(-50%);
+    transform:translate3d(-50%,0,0);
     width:calc(100% - 32px);
     max-width:418px;
     z-index:50;
@@ -622,9 +622,11 @@
     overflow:hidden;
     border:1px solid var(--line);
     box-shadow:0 14px 30px -10px rgba(0,0,0,.4);
-    transition:transform .3s ease, opacity .3s ease;
+    opacity:1;
+    will-change:transform, opacity;
+    transition:transform .55s cubic-bezier(.22,1,.36,1), opacity .4s ease;
   }
-  .sticky-cta.hide-sticky{ transform:translateX(-50%) translateY(140%); opacity:0; }
+  .sticky-cta.hide-sticky{ transform:translate3d(-50%,calc(100% + 30px),0); opacity:0; pointer-events:none; }
   .sticky-offer-strip{ display:block; height:28px; padding:0 8px; overflow:hidden; background:var(--leaf-mid); color:var(--cream); text-align:center; font-size:15px; font-weight:700; line-height:28px; }
   .sticky-offer-track{ display:flex; width:100%; flex-direction:column; animation:sticky-offer-scroll 5s ease-in-out infinite; }
   .sticky-offer-track span{ display:block; height:28px; white-space:nowrap; }
@@ -1024,6 +1026,11 @@
   .customer-review-image{ position:relative; flex:1; width:100%; min-width:0; height:100%; overflow:hidden; padding:0; border:0; border-radius:0; }
   .customer-review-image img{ position:absolute; inset:0; display:block; width:100%; height:100%; max-width:none; object-fit:cover; object-position:center; border-radius:0; }
   @media(max-width:360px){ .customer-reviews{ padding:32px 12px; } .customer-review-card{ grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); } .customer-review-copy{ padding:15px 11px; } .customer-review-copy blockquote{ font-size:14px; line-height:1.75; } .customer-review-photo{ padding:0; } }
+  @media(prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    .sticky-cta{ transition:none; }
+    .sticky-offer-track{ animation:none; }
+  }
 </style>
 </head>
 <body>
@@ -1034,7 +1041,7 @@
  
   <!-- 1. HERO -->
    <header class="hero-banner" aria-label="હર્બલ ડાયબ કેર" lang="gu">
-     <img src="images/banner.png" alt="હર્બલ ડાયબ કેર વિશે જીતેન્દ્રભાઈનો અનુભવ અને પ્રોડક્ટની માહિતી" width="941" height="1672" fetchpriority="high">
+     <img src="images/banner.avif" alt="હર્બલ ડાયબ કેર વિશે જીતેન્દ્રભાઈનો અનુભવ અને પ્રોડક્ટની માહિતી" width="941" height="1672" fetchpriority="high">
    </header>
 
   <!-- 2. DIABETES SYMPTOMS -->
@@ -1045,10 +1052,10 @@
     </div>
     <!-- Replace each image src below with your symptom image in the images folder. -->
     <div class="specimen-list">
-      <div class="specimen"><span class="specimen-tag">01</span><span class="specimen-index">01</span><div class="specimen-img"><img src="images/symp1.jpg" alt="" loading="lazy"></div><div class="specimen-text">આંખમાં <b>ઝાંખું દેખાવું</b></div></div>
-      <div class="specimen"><span class="specimen-tag">02</span><span class="specimen-index">02</span><div class="specimen-img"><img src="images/symp2.jpg" alt="" loading="lazy"></div><div class="specimen-text">પગમાં <b>ખાલી ચડવી</b></div></div>
-      <div class="specimen"><span class="specimen-tag">03</span><span class="specimen-index">03</span><div class="specimen-img"><img src="images/symp3.jpg" alt="" loading="lazy"></div><div class="specimen-text"><b>થાક</b> અને ઊર્જાનો અભાવ</div></div>
-      <div class="specimen"><span class="specimen-tag">04</span><span class="specimen-index">04</span><div class="specimen-img"><img src="images/symp4.jpg" alt="" loading="lazy"></div><div class="specimen-text">વારંવાર <b>પેશાબ જવું પડે</b></div></div>
+      <div class="specimen"><span class="specimen-tag">01</span><span class="specimen-index">01</span><div class="specimen-img"><img src="images/symp1.avif" alt="" loading="lazy"></div><div class="specimen-text">આંખમાં <b>ઝાંખું દેખાવું</b></div></div>
+      <div class="specimen"><span class="specimen-tag">02</span><span class="specimen-index">02</span><div class="specimen-img"><img src="images/symp2.avif" alt="" loading="lazy"></div><div class="specimen-text">પગમાં <b>ખાલી ચડવી</b></div></div>
+      <div class="specimen"><span class="specimen-tag">03</span><span class="specimen-index">03</span><div class="specimen-img"><img src="images/symp3.avif" alt="" loading="lazy"></div><div class="specimen-text"><b>થાક</b> અને ઊર્જાનો અભાવ</div></div>
+      <div class="specimen"><span class="specimen-tag">04</span><span class="specimen-index">04</span><div class="specimen-img"><img src="images/symp4.avif" alt="" loading="lazy"></div><div class="specimen-text">વારંવાર <b>પેશાબ જવું પડે</b></div></div>
     </div>
   </section>
 
@@ -1056,7 +1063,7 @@
   <section class="ingredients" id="ingredients" lang="gu">
     <p class="eyebrow">ઘટકો</p>
    
-    <img class="ingredients-hero-image" src="images/ing.png" alt="હર્બલ ડાયબ કેરમાં વપરાતા આયુર્વેદિક ઘટકો" loading="lazy">
+    <img class="ingredients-hero-image" src="images/ing.avif" alt="હર્બલ ડાયબ કેરમાં વપરાતા આયુર્વેદિક ઘટકો" loading="lazy">
   <h2 class="ingredients-detail-heading">જાણો આ ઘટકો કેવી રીતે મદદ કરે છે</h2>
     <div class="ing-grid">
       <div class="ing-card">
@@ -1128,7 +1135,7 @@
     <h2 class="sub-heading center">હર્બલ ડાયબ કેરના ફાયદા</h2>
     <div class="work-row">
       <div class="work-frame">
-        <img src="images/benefit1.jpg" alt="બ્લડ શુગરનું નિયંત્રણ" loading="lazy">
+        <img src="images/benefit1.avif" alt="બ્લડ શુગરનું નિયંત્રણ" loading="lazy">
       </div>
       <div class="work-text">
         <div class="work-num">01</div>
@@ -1140,7 +1147,7 @@
 
     <div class="work-row reverse">
       <div class="work-frame">
-        <img src="images/benefit2.jpg" alt="શરીરને ઊર્જા" loading="lazy">
+        <img src="images/benefit2.avif" alt="શરીરને ઊર્જા" loading="lazy">
       </div>
       <div class="work-text">
         <div class="work-num">02</div>
@@ -1152,7 +1159,7 @@
 
     <div class="work-row">
       <div class="work-frame">
-        <img src="images/benefit3.jpg" alt="પગનાં તળિયાંમાં બળતરા" loading="lazy">
+        <img src="images/benefit3.avif" alt="પગનાં તળિયાંમાં બળતરા" loading="lazy">
       </div>
       <div class="work-text">
         <div class="work-num">03</div>
@@ -1164,7 +1171,7 @@
 
     <div class="work-row reverse">
       <div class="work-frame">
-        <img src="images/benefit4.jpg" alt="પગમાં ખાલી ચડવી" loading="lazy">
+        <img src="images/benefit4.avif" alt="પગમાં ખાલી ચડવી" loading="lazy">
       </div>
       <div class="work-text">
         <div class="work-num">04</div>
@@ -1277,7 +1284,7 @@
         </div>
         <figure class="customer-review-photo">
           <!-- Replace this src with a corresponding customer photo when available. -->
-          <div class="customer-review-image"><img src="images/test1.png" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
+          <div class="customer-review-image"><img src="images/test1.avif" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
         </figure>
       </article>
       <article class="customer-review-card">
@@ -1289,7 +1296,7 @@
         </div>
         <figure class="customer-review-photo">
           <!-- Replace this src with a corresponding customer photo when available. -->
-          <div class="customer-review-image"><img src="images/test2.png" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
+          <div class="customer-review-image"><img src="images/test2.avif" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
         </figure>
       </article>
       <article class="customer-review-card">
@@ -1301,7 +1308,7 @@
         </div>
         <figure class="customer-review-photo">
           <!-- Replace this src with a corresponding customer photo when available. -->
-          <div class="customer-review-image"><img src="images/test3.png" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
+          <div class="customer-review-image"><img src="images/test3.avif" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
         </figure>
       </article>
       <article class="customer-review-card">
@@ -1313,7 +1320,7 @@
         </div>
         <figure class="customer-review-photo">
           <!-- Replace this src with a corresponding customer photo when available. -->
-          <div class="customer-review-image"><img src="images/test4.png" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
+          <div class="customer-review-image"><img src="images/test4.avif" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
         </figure>
       </article>
     </div>
@@ -1391,7 +1398,7 @@
     <div class="yt-card">
       <div class="yt-frame">
         <iframe src="https://www.youtube.com/embed/0EsBTsrSNsY?rel=0" title="Blood Sugar Wellness video 1" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-        <button class="yt-thumb" type="button" aria-label="Play first YouTube video"><img src="https://i.ytimg.com/vi/0EsBTsrSNsY/hqdefault.jpg" alt="First YouTube video thumbnail"></button>
+        <button class="yt-thumb" type="button" aria-label="Play first YouTube video"><img src="https://i.ytimg.com/vi/0EsBTsrSNsY/hqdefault.avif" alt="First YouTube video thumbnail"></button>
         <button class="yt-mute" type="button" aria-label="Mute YouTube video"><i class="ti ti-volume-off" aria-hidden="true"></i></button>
       </div>
       <div class="yt-caption"><span class="yt-caption-icon" aria-hidden="true">✦</span><span>Diabetes से जुड़ी जरूरी जानकारी</span></div>
@@ -1472,12 +1479,12 @@
   </div>
 
   <!-- STICKY CTA -->
-  <div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta hide-sticky" id="stickyCta" aria-hidden="true" inert>
     <span class="sticky-offer-strip"><span class="sticky-offer-track"><span>Control sugar spikes with Herbal Diab Care</span><span class="buy-one-get-one">🎉🎉 BUY 1 GET 1 🎉🎉</span><span>Control sugar spikes with Herbal Diab Care</span></span></span>
     <div class="sticky-main-row">
       <img class="sticky-product-image" src="images/bottom-pro.avif" alt="Herbal Diab Care product">
       <span class="sticky-product-info"><strong>HERBAL Diab CARE</strong><small>Daily wellness support</small><em class="sticky-price">Special Offer</em></span>
-      <button onclick="document.getElementById('orderForm').scrollIntoView({behavior:'smooth'})">BUY NOW</button>
+      <button data-scroll-target="orderForm">BUY NOW</button>
     </div>
     <div class="sticky-trust-row"><span>★ Quality Checked</span><span>★ Herbal Formula</span><span>★ Secure Order</span></div>
   </div>
@@ -1572,23 +1579,36 @@
     });
   });
 
-  // ---------- Sticky elements hide during order form ----------
+  // ---------- Show sticky ordering from the start of the second section ----------
   const topBanner = document.getElementById('topBanner');
   const stickyCta = document.getElementById('stickyCta');
   const orderSection = document.getElementById('orderForm');
-
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        if(topBanner) topBanner.classList.add('hide-sticky');
-        stickyCta.classList.add('hide-sticky');
-      } else {
-        if(topBanner) topBanner.classList.remove('hide-sticky');
-        stickyCta.classList.remove('hide-sticky');
-      }
+  const secondSection = document.getElementById('pain') || document.querySelector('.hero-banner + section');
+  function updateStickyVisibility(){
+    const overlay = document.getElementById('redirectOverlay');
+    const secondSectionStarted = secondSection && secondSection.getBoundingClientRect().top < window.innerHeight;
+    const orderBounds = orderSection && orderSection.getBoundingClientRect();
+    const orderVisible = orderBounds && orderBounds.bottom > 0 && orderBounds.top < window.innerHeight;
+    const shouldHide = !secondSectionStarted || Boolean(orderVisible) || Boolean(overlay && overlay.classList.contains('show'));
+    [topBanner, stickyCta].filter(Boolean).forEach(bar=>{
+      bar.classList.toggle('hide-sticky', shouldHide);
+      bar.inert = shouldHide;
+      bar.setAttribute('aria-hidden', String(shouldHide));
     });
-  }, { threshold: 0.25 });
-  io.observe(orderSection);
+  }
+  let stickyFramePending = false;
+  function scheduleStickyVisibility(){
+    if(stickyFramePending) return;
+    stickyFramePending = true;
+    requestAnimationFrame(()=>{
+      stickyFramePending = false;
+      updateStickyVisibility();
+    });
+  }
+  updateStickyVisibility();
+  window.addEventListener('scroll', scheduleStickyVisibility, { passive:true });
+  window.addEventListener('resize', scheduleStickyVisibility);
+  window.addEventListener('load', scheduleStickyVisibility);
 
   // ---------- Order form validation + Google Sheet submit + redirect to Thank You page ----------
   const nameInput = document.getElementById('custName');
@@ -1695,6 +1715,58 @@
     function closeIfOutside(e) {
       if (e.target === document.getElementById('pp-overlay')) closeModal();
     }
+  // Smooth section navigation; manual scrolling keeps the browser's native behavior.
+  let sectionScrollFrame = null;
+  let previousScrollBehavior = '';
+  function stopSectionScroll(){
+    if(sectionScrollFrame === null) return;
+    cancelAnimationFrame(sectionScrollFrame);
+    sectionScrollFrame = null;
+    document.documentElement.style.scrollBehavior = previousScrollBehavior;
+  }
+  function scrollToPageSection(target){
+    stopSectionScroll();
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      target.scrollIntoView({ behavior:'instant', block:'start' });
+      return;
+    }
+    const start = window.scrollY;
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const destination = Math.min(maxScroll, Math.max(0, start + target.getBoundingClientRect().top - 16));
+    const distance = destination - start;
+    if(Math.abs(distance) < 1) return;
+    const duration = Math.min(1000, Math.max(450, Math.abs(distance) * 0.22));
+    const started = performance.now();
+    previousScrollBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    function step(now){
+      const progress = Math.min(1, (now - started) / duration);
+      const eased = progress < 0.5 ? 4 * progress * progress * progress : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+      window.scrollTo(0, start + distance * eased);
+      if(progress < 1) sectionScrollFrame = requestAnimationFrame(step);
+      else {
+        sectionScrollFrame = null;
+        document.documentElement.style.scrollBehavior = previousScrollBehavior;
+      }
+    }
+    sectionScrollFrame = requestAnimationFrame(step);
+  }
+  document.addEventListener('click', event=>{
+    if(event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const trigger = event.target.closest('a[href^="#"], [data-scroll-target]');
+    if(!trigger) return;
+    const id = trigger.dataset.scrollTarget || trigger.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if(!target) return;
+    event.preventDefault();
+    scrollToPageSection(target);
+  });
+  window.addEventListener('wheel', stopSectionScroll, { passive:true });
+  window.addEventListener('touchstart', stopSectionScroll, { passive:true });
+  window.addEventListener('pointerdown', stopSectionScroll, { passive:true });
+  window.addEventListener('keydown', event=>{
+    if(['ArrowUp','ArrowDown','PageUp','PageDown','Home','End',' '].includes(event.key)) stopSectionScroll();
+  });
 </script>
 
 </body>
