@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Herbal Diab Care | Ayurvedic Blood Sugar Wellness</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&family=Halant:ital@1&display=swap" rel="stylesheet">
@@ -791,7 +791,7 @@
     h1.main-heading{ font-size:21px; }
     h2.sub-heading{ font-size:19px; }
     .video-block2 .frame, .cert-flex .frame{ width:92px; height:92px; }
-    .order-badge{font-size: 15px !important;}
+
   }
 
 
@@ -1027,52 +1027,59 @@
   .customer-review-image{ position:relative; flex:1; width:100%; min-width:0; height:100%; overflow:hidden; padding:0; border:0; border-radius:0; }
   .customer-review-image img{ position:absolute; inset:0; display:block; width:100%; height:100%; max-width:none; object-fit:cover; object-position:center; border-radius:0; }
   @media(max-width:360px){ .customer-reviews{ padding:32px 12px; } .customer-review-card{ grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); } .customer-review-copy{ padding:15px 11px; } .customer-review-copy blockquote{ font-size:14px; line-height:1.75; } .customer-review-photo{ padding:0; } }
-  /* Shared typography: the same hierarchy on phone and desktop. */
+  /* Shared sizes at every viewport; footer disclaimer and policy styles stay separate. */
   :root{
-    --text-heading:clamp(1.5rem, 1.2rem + 1.1vw, 1.75rem);
-    --text-title:clamp(1.125rem, 1rem + .5vw, 1.25rem);
-    --text-body:clamp(1rem, .9rem + .4vw, 1.0625rem);
-    --text-small:.875rem;
+    --section-heading-size:1.625rem;
+    --section-title-size:1.125rem;
+    --section-body-size:1rem;
+    --section-caption-size:.875rem;
   }
-  body{ font-size:var(--text-body); line-height:1.65; }
-  h1.main-heading, h2.sub-heading, .pain-title,
-  .ingredients-detail-heading, .solution-kicker,
-  .works > .sub-heading, .offer h1.main-heading,
-  #doctorPatient .sub-heading, #orderForm .sub-heading,
-  .customer-reviews .sub-heading{
-    font-size:var(--text-heading); line-height:1.5; font-weight:700;
-    overflow-wrap:break-word; text-wrap:balance;
+  h1.main-heading, h2.sub-heading, .pain-title, .ingredients-detail-heading,
+  .solution-kicker, .works > .sub-heading, .offer h1.main-heading,
+  #doctorPatient .sub-heading, #orderForm .sub-heading, .customer-reviews .sub-heading{
+    font-size:var(--section-heading-size); line-height:1.5; font-weight:700;
+    text-wrap:balance; overflow-wrap:break-word;
   }
-  .eyebrow, .solution-eyebrow, .works > .eyebrow,
-  .offer .eyebrow, #doctorPatient .eyebrow, .customer-reviews .eyebrow{
-    font-size:var(--text-title); line-height:1.5; letter-spacing:.02em;
+  .eyebrow, .solution-eyebrow, .works > .eyebrow, .offer .eyebrow,
+  #doctorPatient .eyebrow, .customer-reviews .eyebrow{
+    font-size:var(--section-title-size); line-height:1.5; letter-spacing:.02em;
   }
   .eyebrow::before, .eyebrow::after{ flex-shrink:0; }
   .pain-subtitle, .brand-tag, .pain-footer .lede, .work-text h3,
   .patient-card-heading h3, .ing-card h4, .testi-body h4,
   .customer-review-person h3, .doctor-review-title, .doctor-review-name,
-  .yt-caption, .compare-final strong, #orderForm .order-details-title{
-    font-size:var(--text-title); line-height:1.5;
+  .yt-caption, .compare-final strong, #orderForm .order-details-title,
+  .offer-cta-label strong{
+    font-size:var(--section-title-size); line-height:1.5;
   }
-  p, .specimen-text, .pain-footer p, .solution-body p, .work-text p,
-  .patient-intro, .ing-card p, .ing-strap, .cert-list li,
-  .compare-final p, .testi-body p, .customer-reviews-intro,
-  .customer-review-copy blockquote, .offer-checks span, .order-intro,
-  .faq-q, .faq-a{
-    font-size:var(--text-body); line-height:1.7;
+  .brand-name{ font-size:1.5rem; line-height:1.5; }
+  #orderForm .order-badge{ font-size:1rem; line-height:1.5; }
+  .specimen-text, .pain-footer p, .solution-body p, .work-text p,
+  .patient-intro, .ing-card p, .ing-strap, .cert-list li, .compare-final p,
+  .testi-body p, .customer-reviews-intro, .customer-review-copy blockquote,
+  .offer-checks span, .order-intro, .faq-q, .faq-a{
+    font-size:var(--section-body-size); line-height:1.75;
   }
   .doctor-review-copy, .doctor-video-label, .yt-note, .gu-compare-note,
   .testi-body span, .customer-review-person>span, .offer-benefits-title,
-  #orderForm .field label, #orderForm .err, #orderForm .order-privacy,
-  #orderForm .order-footer, .disclaimer-strip, .disclaimer{
-    font-size:var(--text-small); line-height:1.65;
+  .patient-card-kicker, .tag-pill, #orderForm .field label, #orderForm .err,
+  #orderForm .order-privacy, #orderForm .order-footer, .order-product-tag{
+    font-size:var(--section-caption-size); line-height:1.65;
   }
-  .cta-btn, #orderForm .submit-btn{ font-size:var(--text-title); line-height:1.5; }
-  #orderForm .field input{ font-family:inherit; font-size:1rem; line-height:1.5; }
+  .gu-compare, .gu-compare tbody th, .gu-compare td:last-child,
+  .compare-row > div{ font-size:var(--section-caption-size); line-height:1.65; }
+  .gu-compare thead th, .compare-head > div{ font-size:var(--section-body-size); line-height:1.5; }
+  .gu-compare thead small, .orbit-label, .badge-natural, .doctor-review-rating{
+    font-size:.75rem; line-height:1.5;
+  }
+  .cta-btn, #orderForm .submit-btn{ font-size:var(--section-title-size); line-height:1.5; }
+  #orderForm .field input{ font-size:var(--section-body-size); line-height:1.5; }
   #orderForm .order-footer{ flex-wrap:wrap; }
-  .pl-link{ font-size:.75rem; line-height:1.5; padding:6px 4px; }
-  .pl-row{ flex-wrap:wrap; }
-
+  .offer-cta-panel{ flex-wrap:wrap; }
+  .buyget{ font-size:1.375rem; line-height:1.5; }
+  .sticky-offer-strip, .sticky-cta button, .sticky-price{ font-size:.875rem; }
+  .sticky-product-info strong, .sticky-product-info small{ font-size:.75rem; }
+  .sticky-trust-row{ font-size:.625rem; line-height:1.5; }
   @media(prefers-reduced-motion:reduce){
     html{ scroll-behavior:auto; }
     .sticky-cta{ transition:none; }
@@ -1383,7 +1390,7 @@
       </div></div>
       <div class="offer-benefits">
         <p class="offer-benefits-title">Ayurvedic Wellness</p>
-        <p class="brand-name" style="color:var(--cream); text-align:left; font-size:20px; line-height:1.05;">HERBAL<br>Diab CARE</p>
+        <p class="brand-name" style="color:var(--cream); text-align:left;">HERBAL<br>Diab CARE</p>
         <div class="offer-checks">
           <span>Quality Checked</span>
           <span>Herbal Formula</span>
