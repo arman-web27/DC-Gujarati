@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herbal Diab Care | Ayurvedic Blood Sugar Wellness</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&family=Halant:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --leaf-dark:#1F4B3A;
+    --leaf-mid:#3E7A5C;
+    --leaf-soft:#8FBBA1;
+    --turmeric:#fab452;
+    --turmeric-deep:#A9691B;
+    --cream:#FBF6EA;
+    --cream-2:#F3ECDB;
+    --ink:#2A2620;
+    --brick:#B4562F;
+    --line:#E4DBC4;
+    --radius-blob-1: 62% 38% 55% 45% / 48% 45% 55% 52%;
+    --radius-blob-2: 45% 55% 60% 40% / 55% 48% 52% 45%;
+    --font-display:'Halant', 'Noto Sans Devanagari', serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--font-display);
+    background:#DDD6C4;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .element {
+    touch-action: manipulation;
+}
+  .page{
+    max-width:450px;
+    margin:0 auto;
+    background:var(--cream);
+    position:relative;
+    overflow-x:hidden;
+    min-height:100vh;
+    box-shadow:0 0 40px rgba(0,0,0,.18);
+    transition:filter .35s ease;
+  }
+  .page.blurred{ filter:blur(7px) brightness(.9); pointer-events:none; }
+  img{max-width:100%; display:block; border-radius: 15px;}
+  p{font-size:17px; line-height:1.65;}
+  ul{list-style:none;}
+  a{text-decoration:none; color:inherit;}
+  button{font-family:inherit; cursor:pointer; border:none;}
+
+  section{
+    padding:44px 22px;
+    position:relative;
+  }
+  .eyebrow{
+    font-size:22px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--turmeric-deep);
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before, .eyebrow::after{
+    content:"";
+    width:22px; height:1.5px;
+    background:var(--turmeric-deep);
+    opacity:.6;
+  }
+  h1.main-heading{
+    font-size:29px;
+    text-align:center;
+    color:var(--leaf-dark);
+    line-height:1.35;
+    font-weight:700;
+    margin-bottom:16px;
+  }
+  h2.sub-heading{
+    font-size:28px;
+    color:var(--leaf-dark);
+    font-weight:600;
+    line-height:1.4;
+    margin-bottom:12px;
+  }
+  .center{text-align:center;}
+
+  /* image frame shapes (never square/rect/circle) */
+  .frame{
+    position:relative;
+    overflow:hidden;
+    min-width:140px;
+    min-height:140px;
+  }
+  .frame img{width:100%; height:100%; object-fit:cover;}
+  .frame-blob1{ border-radius:var(--radius-blob-1); }
+  .frame-blob2{ border-radius:var(--radius-blob-2); }
+  .frame-leaf{ border-radius: 0% 78% 0% 78% / 0% 78% 0% 78%; }
+  .frame-arch{ border-radius: 46% 46% 8% 8% / 60% 60% 6% 6%; }
+  .frame-hex{ clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%); }
+  .frame-cut{ clip-path: polygon(14% 0, 100% 0, 100% 86%, 86% 100%, 0 100%, 0 14%); }
+
+  /* ============ TOP BANNER ============ */
+  .top-banner{
+    position:sticky; top:0; z-index:40;
+    max-width:450px; margin:0 auto;
+    background:var(--leaf-dark);
+    color:var(--cream);
+    font-size:14.5px;
+    text-align:center;
+    padding:9px 14px;
+    letter-spacing:.02em;
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .top-banner.hide-sticky{ transform:translateY(-120%); opacity:0; }
+
+  .hero-banner{ display:block; width:100%; margin:0; padding:0; overflow:hidden; line-height:0; }
+  .hero-banner img{ display:block; width:100%; max-width:100%; height:auto; margin:0; padding:0; border:0; border-radius:0; object-fit:contain; }
+  /* ============ HERO ============ */
+  .hero{
+    background:
+      radial-gradient(circle at 85% -10%, rgba(198,134,46,.25), transparent 55%),
+      linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+    padding-top:38px;
+    padding-bottom:40px;
+    text-align:center;
+  }
+  .hero-art{
+    width:100%;
+    max-width:280px;
+    height:200px;
+    margin:6px auto 22px;
+  }
+  .hero p.lead{
+    font-size:17px;
+    color:#4a453b;
+    max-width:360px;
+    margin:0 auto;
+  }
+
+  /* ============ PAIN SECTION ============ */
+  .pain{ background:var(--cream); color:var(--ink); padding:28px 22px 26px; border-bottom:1px solid var(--line); }
+  .pain-header{ padding:0 4px 20px; border-bottom:1px dashed var(--turmeric); }
+  .pain-eyebrow{ display:flex; align-items:center; gap:7px; color:var(--leaf-dark); font-family:Arial,sans-serif; font-size:10px; letter-spacing:.14em; margin-bottom:9px; }
+  .pain-eyebrow::before{ content:""; width:22px; height:1px; background:var(--turmeric-deep); }
+  .pain-title{ color:var(--leaf-dark); font-size:27px; font-weight:700; line-height:1.45; }
+  .pain-title .accent{ color:var(--brick); }
+  .pain-subtitle{ margin-top:7px; color:var(--turmeric-deep); font-size:22px; font-weight: 600; font-style:italic; }
+  .specimen-list{ display:flex; flex-direction:column; gap:20px; padding:24px 0 4px; }
+  .specimen{ position:relative; display:flex; align-items:center; min-height:144px; padding:13px 12px 13px 72px; background:var(--cream-2); border:1px dashed var(--leaf-soft); border-radius:10px; }
+  .specimen:nth-child(odd){ transform:rotate(-.6deg); }
+  .specimen:nth-child(even){ transform:rotate(.6deg); }
+  .specimen-tag{ position:absolute; top:-10px; right:12px; padding:3px 10px 4px; background:var(--turmeric-deep); color:var(--cream); font-size:12px; font-weight:700; border-radius:3px; }
+  .specimen-tag::after{ content:""; position:absolute; left:8px; bottom:-5px; border-left:5px solid transparent; border-right:5px solid transparent; border-top:5px solid var(--turmeric-deep); }
+  .specimen-img{ position:absolute; left:-7px; top:50%; width:132px; height:132px; padding:3px; transform:translateY(-50%); background:var(--leaf-dark); border-radius:10%; box-shadow:0 6px 14px -6px rgba(31,75,58,.55); }
+  .specimen-img img{ width:100%; height:100%; object-fit:cover; border:2px solid var(--cream); border-radius:10%; }
+  .specimen-index{ position:absolute; left:48px; top:8px; color:var(--leaf-mid); font-family:Arial,sans-serif; font-size:10px; letter-spacing:.05em; }
+  .specimen-text{ padding-left:92px; color:var(--ink); font-size:18px; font-weight:500; line-height:1.5; }
+  .specimen-text b{ color:var(--brick); font-weight:700; }
+  .pain-footer{ position:relative; margin:22px 0 0; padding:18px; background:var(--leaf-dark); color:var(--cream); border-radius:12px; }
+  .pain-footer::before{ content:""; position:absolute; top:-7px; left:20px; width:15px; height:15px; background:var(--leaf-dark); transform:rotate(45deg); border-radius:3px; }
+  .pain-footer .lede{ margin-bottom:7px; color:var(--turmeric); font-size:18px; font-weight:600; line-height:1.35; }
+  .pain-footer p{ color:var(--cream-2); font-size:16px; line-height:1.6; }
+  .pain-footer .highlight{ color:var(--turmeric); font-weight:700; }
+
+  /* ============ SOLUTION SECTION ============ */
+  .solution{ background:linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%); padding:30px 30px 0; overflow:hidden; }
+  .solution-eyebrow{ text-align:center; color:var(--turmeric-deep); font-family:Arial,sans-serif; font-size:22px; font-weight:600; text-transform:uppercase; margin-bottom:6px; }
+  .solution-kicker{ text-align:center; color:var(--leaf-mid); font-size:28px; font-weight:600; line-height:1.35; margin-bottom:18px; }
+  .orbit-stage{ position:relative; width:380px; max-width:100%; height:380px; margin:0 auto; }
+  .orbit-ring{ position:absolute; inset:0; border:2px dashed rgba(198,134,46,.55); border-radius:50%; }
+  .orbit-ring::before{ content:""; position:absolute; inset:34px; border:1px solid rgba(63,122,92,.25); border-radius:50%; }
+  .product-photo{ position:absolute; top:70px; left:70px; width:240px; height:240px; padding:10px; z-index:2; border-radius:50%; background:radial-gradient(circle at 32% 24%,rgba(255,255,255,.6),transparent 55%),linear-gradient(150deg,var(--leaf-soft),var(--cream-2) 55%,var(--turmeric) 140%); box-shadow:0 22px 40px -14px rgba(31,75,58,.4); }
+  .product-photo-inner{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; overflow:hidden; border:1px solid rgba(255,255,255,.7); border-radius:50%; background:var(--cream); }
+  .product-photo-inner img{ width:100%; height:100%; object-fit:cover; border-radius: 50%; filter:drop-shadow(0 12px 14px rgba(42,38,32,.25)); }
+  .orbit-icon{ position:absolute; width:64px; height:64px; z-index:3; display:flex; align-items:center; justify-content:center; border-radius:50%; background:linear-gradient(145deg,var(--leaf-mid),var(--leaf-dark)); box-shadow:0 10px 20px rgba(31,75,58,.35),0 0 0 5px var(--cream); }
+  .orbit-icon svg{ width:26px; height:26px; }
+  .orbit-icon.i1{ top:10px; left:165px; }
+  .orbit-icon.i2{ top:242px; left:299px; }
+  .orbit-icon.i3{ top:242px; left:31px; }
+  .orbit-label{ position:absolute; width:88px; color:var(--leaf-dark); font-size:13px; font-weight:600; line-height:1.25; text-align:center; }
+  .orbit-label.l1{ top:78px; left:146px; }
+  .orbit-label.l2{ top:310px; left:262px; }
+  .orbit-label.l3{ top:310px; left:0; }
+  .badge-natural{ position:absolute; top:26px; right:16px; z-index:4; padding:8px 12px; color:var(--cream); background:var(--turmeric-deep); border-radius:999px; box-shadow:0 8px 16px rgba(169,105,27,.35); font-size:13px; font-weight:600; }
+  .solution-body{ padding:8px 6px 26px; text-align:center; }
+  .brand-name{ color:var(--leaf-dark); font-size:25px; font-weight:700; line-height:1.2; margin-bottom:4px; }
+  .brand-name span{ color:var(--turmeric-deep); }
+  .brand-tag{ color:var(--leaf-mid); font-size:18px; font-weight:600; line-height:1.35; margin-bottom:16px; }
+  .solution-body p{ color:var(--ink); font-size:18px; line-height:1.75; margin:0 auto 10px; opacity:.85; text-align:left; }
+  .solution-body u{ text-decoration-color:var(--turmeric); }
+  .tag-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:16px; }
+  .tag-pill{ padding:6px 12px; color:var(--leaf-dark); background:rgba(143,187,161,.28); border:1px solid rgba(63,122,92,.3); border-radius:999px; font-size:14px; font-weight:600; }
+  .disclaimer-strip{ margin:20px -30px 0; padding:13px 26px; color:var(--cream); background:var(--leaf-dark); font-size:10.5px; line-height:1.6; text-align:center; }
+
+  /* ============ HOW IT WORKS ============ */
+  .works{ background:var(--cream); padding:30px 0 0; overflow:hidden; }
+  .works > .eyebrow, .works > .sub-heading{ margin-left:26px; margin-right:26px; }
+  .works > .eyebrow{ font-size:22px; font-weight:700; letter-spacing:.2em; }
+  .works > .sub-heading{ font-size:20px; line-height:1.55; margin-bottom:20px; }
+  .work-row{ display:flex; align-items:stretch; min-height:180px; }
+  .work-row.reverse{ flex-direction:row-reverse; }
+  .work-frame{ width:180px; height:180px; min-width:180px; min-height:180px; overflow:hidden; border-radius:0; }
+  .work-frame img{ width:100%; height:100%; object-fit:cover; transform:scale(1); transform-origin:center; animation:work-image-pulse 5s ease-in-out infinite; }
+  .work-text{ flex:1 1 auto; display:flex; flex-direction:column; justify-content:center; padding:20px 18px; }
+  .work-row:nth-of-type(odd) .work-text{ background:var(--cream-2); }
+  .work-num{ color:var(--brick); font-size:18px; font-weight:700; letter-spacing:.08em; margin-bottom:6px; }
+  .work-text h3{ position:relative; width:max-content; max-width:100%; color:var(--leaf-dark); font-size:18px; font-weight:700; line-height:1.25; margin-bottom:14px; }
+  .work-text h3::after{ content:""; position:absolute; left:0; bottom:-8px; width:0; height:2px; background:var(--turmeric); animation:work-heading-line 5s ease-in-out infinite; }
+  .work-text p{ color:#565044; font-size:16px; line-height:1.55; }
+  .work-text p b{ color:var(--leaf-mid); font-weight:700; }
+  .work-divider{ height:1px; background:var(--line); }
+  @keyframes work-image-pulse{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.12); } }
+  @keyframes work-heading-line{ 0%,100%{ width:0; } 50%{ width:100%; } }
+
+  /* ============ VIDEO SECTIONS ============ */
+  .video-block{ background:var(--leaf-dark); color:var(--cream); text-align:center; }
+  .video-block .eyebrow{ color:#E7C77B; }
+  .video-block .eyebrow::before, .video-block .eyebrow::after{ background:#E7C77B; }
+  .video-frame{
+    position:relative;
+    width:100%;
+    aspect-ratio:9/13;
+    max-height:420px;
+    border-radius:26px 26px 60px 26px;
+    overflow:hidden;
+    border:5px solid rgba(255,255,255,.18);
+    margin-top:16px;
+    background:#0d2019;
+  }
+  .video-frame video{ width:100%; height:100%; object-fit:cover; }
+  .doctor-review-grid{ display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; margin-top:22px; }
+  .doctor-review-card{ min-width:0; padding:12px 10px 16px; background:var(--leaf-mid); border-radius:16px 16px 22px 16px; box-shadow:0 16px 28px rgba(0,0,0,.2); text-align:left; }
+  .doctor-review-title{ color:var(--cream); text-align:center; font-size:18px; font-weight:600; margin-bottom:10px; }
+  .doctor-review-media{ position:relative; width:100%; aspect-ratio:9/16; overflow:hidden; border-radius:14px 14px 22px 14px; background:#0d2019; }
+  .doctor-review-media video{ width:100%; height:100%; display:block; object-fit:contain; }
+ 
+  .doctor-review-rating{ display:block; width:max-content; margin:9px 0 6px auto; padding:5px 8px; border-radius:16px; background:var(--turmeric); color:var(--leaf-dark); font-size:13px; letter-spacing:1px; }
+  .doctor-review-name{ color:var(--turmeric); margin-top: 10px; font-style:italic; font-size:20px; line-height:.95; }
+  .doctor-review-copy{ margin:10px 3px 0 14px; color:#fff5e8; font-size:12px; line-height:1.3; }
+
+  #doctorPatient{ padding:36px 18px; background:radial-gradient(ellipse at top right,rgba(143,187,161,.18),transparent 60%),var(--leaf-dark); }
+  #doctorPatient .eyebrow{ font-size:17px; letter-spacing:0; gap:8px; }
+  #doctorPatient .sub-heading{ font-size:27px; line-height:1.55; margin-bottom:12px; }
+  .patient-heading-accent{ color:var(--turmeric); }
+  .patient-intro{ max-width:350px; margin:0 auto; font-size:16px; line-height:1.8; color:#e0eadd; }
+  .patient-video-grid{ display:grid; gap:22px; margin-top:26px; }
+  .patient-video-card{ min-width:0; overflow:hidden; background:var(--cream); border:1px solid rgba(250,180,82,.45); border-radius:20px; box-shadow:0 12px 24px rgba(0,0,0,.16); text-align:left; }
+  .patient-card-heading{ display:flex; align-items:center; gap:12px; padding:17px 15px; }
+  .patient-card-heading h3{ font-size:18px; line-height:1.5; color:var(--leaf-dark); }
+  .patient-card-kicker{ margin-bottom:3px; font-size:12px; line-height:1.4; color:var(--turmeric-deep); }
+  .patient-card-icon{ display:flex; align-items:center; justify-content:center; flex:0 0 40px; height:40px; border-radius:12px; background:#e3ebdd; color:var(--leaf-dark); }
+  .patient-card-icon svg{ width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+  .patient-card-number{ margin-left:auto; font:600 21px Arial,sans-serif; color:#aebba5; }
+  .patient-video-media{ margin:0 10px 10px; overflow:hidden; border-radius:12px; background:#0d2019; }
+  .patient-video-media video{ display:block; width:100%; height:auto; max-height:440px; aspect-ratio:9/12; object-fit:contain; }
+  @media(max-width:360px){ #doctorPatient{ padding:30px 14px; } #doctorPatient .sub-heading{ font-size:24px; } .patient-card-heading{ gap:9px; padding:14px 12px; } .patient-card-heading h3{ font-size:16px; } .patient-card-number{ font-size:18px; } }
+  .video-block2{ background:linear-gradient(180deg, var(--leaf-dark) 0%, #2d674b 100%); color:var(--cream); text-align:center; overflow:hidden; }
+  .video-block2 .eyebrow{ color:#E7C77B; }
+  .video-block2 .eyebrow::before, .video-block2 .eyebrow::after{ background:#E7C77B; }
+  .video-block2 .sub-heading{ color:var(--cream); }
+  .doctor-slider{ display:flex; align-items:flex-end; gap:10px; margin:22px 0 0; min-height:245px; }
+  .doctor-slide{ min-width:0; flex:.85; padding-bottom:20px; transition:flex .4s ease, transform .4s ease; cursor:pointer; }
+  .doctor-slide.active{ flex:1.15; padding-bottom:0; transform:translateY(-5px); }
+  .doctor-video-frame{ position:relative; width:100%; aspect-ratio:9/16; overflow:hidden; border:2px solid var(--turmeric); border-radius:20px 20px 28px 20px; background:#0d2019; box-shadow:0 14px 25px rgba(0,0,0,.28); }
+  .doctor-video-frame video{ width:100%; height:100%; object-fit:contain; display:block; }
+  .doctor-video-label{ padding:7px 4px 0; color:var(--cream); font-size:14px; font-weight:600; text-align:left; }
+
+  .yt-block{ background:var(--leaf-dark); padding:38px 18px 44px; }
+  .yt-block .eyebrow{ color:#E7C77B; }
+  .yt-block .eyebrow::before, .yt-block .eyebrow::after{ background:#E7C77B; }
+  .yt-block .sub-heading{ color:var(--cream); }
+  .yt-card{ margin-top:18px; padding:14px; background:var(--cream); border:2px solid var(--leaf-soft); border-radius:18px 18px 28px 18px; box-shadow:0 16px 26px rgba(0,0,0,.18); }
+  .yt-frame{ position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; background:#0d2019; border:3px solid var(--leaf-mid); }
+  .yt-frame iframe{ width:100%; height:100%; border:0; display:block; }
+  .yt-thumb{ position:absolute; inset:0; width:100%; height:100%; padding:0; background:#0d2019; z-index:2; }
+  .yt-thumb img{ width:100%; height:100%; object-fit:cover; }
+  .yt-thumb::after{ content:"▶"; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:58px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:12px; background:#e62117; color:#fff; font-size:24px; padding-left:4px; }
+  .yt-thumb.hidden{ display:none; }
+  .yt-mute{ position:absolute; right:10px; bottom:10px; width:38px; height:38px; border-radius:50%; background:rgba(31,75,58,.92); color:var(--cream); font-size:17px; z-index:2; box-shadow:0 4px 10px rgba(0,0,0,.25); }
+  .yt-mute i, .testi-sound i{ pointer-events:none; }
+  .yt-caption{ display:flex; align-items:center; gap:10px; margin-top:12px; color:var(--leaf-dark); font-size:18px; font-weight:600; line-height:1.25; }
+  .yt-caption-icon{ flex:0 0 auto; width:30px; height:30px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:var(--turmeric); color:var(--leaf-dark); font-size:19px; }
+  .yt-note{ margin-top:5px; color:#746b5d; font-size:14px; line-height:1.35; }
+
+  /* ============ INGREDIENTS ============ */
+  .ingredients{ background:var(--cream); }
+  .ingredients-hero-image{ width:100%; height:auto; object-fit:contain; margin:10px auto 24px; border:4px solid var(--leaf-soft); border-radius:28px 8px 28px 8px; box-shadow:0 14px 24px -14px rgba(31,75,58,.45); }
+  .ing-grid{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:0;
+  }
+  .ingredients-detail-heading{ display:flex; align-items:center; justify-content:center; gap:10px; text-align:center; color:var(--leaf-dark); font-size:28px; font-weight:700; line-height:1.35; margin:0 0 18px; padding: 10px; }
+
+  .ing-card{ display:grid; grid-template-columns:34px 1fr; column-gap:10px; align-items:center; padding:10px 12px; background:rgba(255,255,255,.72); border:1px solid var(--line); border-radius:12px 4px 12px 4px; }
+  .ing-icon{ grid-row:span 2; width:30px; height:30px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:var(--leaf-soft); color:var(--leaf-dark); font-size:17px; }
+  .ing-card h4{ font-size:19px; color:var(--leaf-dark); font-weight:600; line-height:1.1; }
+  .ing-card span{ font-size:13px; color:var(--turmeric-deep); font-style:italic; }
+  .ing-card p{ grid-column:2; font-size:18px; line-height:1.35; margin-top:4px; }
+  .ing-strap{
+    margin-top:26px;
+    text-align:center;
+    background:var(--leaf-dark);
+    color:var(--cream);
+    padding:18px 16px;
+    border-radius:24px 6px 24px 6px;
+    font-size:17px;
+  }
+
+  /* ============ CERTIFICATE ============ */
+  .cert{ background:var(--leaf-dark); color:var(--cream); border-bottom:2px solid var(--turmeric); }
+  .cert .eyebrow{ color:#E7C77B; }
+  .cert .eyebrow::before, .cert .eyebrow::after{ background:#E7C77B; }
+  .cert-flex{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-top:18px;
+  }
+  .cert-flex .frame{ width:150px; height:150px; flex:0 0 auto; border-radius:var(--radius-blob-2); border:4px solid rgba(255,255,255,.25);}
+  .cert-list{ display:flex; flex-direction:column; gap:10px; }
+  .cert-list li{ font-size:17px; display:flex; gap:8px; align-items:flex-start; }
+  .cert-list li::before{ content:"✓"; color:var(--turmeric); font-weight:700; }
+
+  /* ============ COMPARE ============ */
+  .gu-compare-wrap{ margin-top:24px; overflow:hidden; border:1px solid var(--leaf-soft); border-radius:18px; box-shadow:0 8px 24px rgba(31,75,58,.08); }
+  .gu-compare{ width:100%; table-layout:fixed; border-collapse:collapse; font-size:15px; line-height:1.65; }
+  .gu-compare th,.gu-compare td{ padding:16px 10px; vertical-align:top; overflow-wrap:anywhere; text-align:left; }
+  .gu-compare thead th{ background:var(--leaf-dark); color:var(--cream); vertical-align:middle; text-align:center; font-size:16px; }
+  .gu-compare thead th:first-child{ width:25%; }
+  .gu-compare thead th:nth-child(2){ width:40%; background:var(--leaf-mid); }
+  .gu-compare thead small{ font-size:12px; font-weight:400; }
+  .gu-compare tbody tr+tr{ border-top:1px solid var(--line); }
+  .gu-compare tbody th{ background:var(--cream-2); color:var(--leaf-dark); font-size:14px; }
+  .gu-compare td:nth-child(2){ background:#e5f2e7; color:var(--leaf-dark); font-weight:600; border-left:1px solid #cbdccc; border-right:1px solid #cbdccc; }
+  .gu-compare td:last-child{ background:#fffdf7; color:#625d53; font-size:14px; }
+  .gu-compare-icon{ display:flex; align-items:center; justify-content:center; width:30px; height:30px; margin-bottom:8px; border-radius:9px; background:var(--leaf-dark); color:var(--turmeric); font-family:Arial,sans-serif; font-size:22px; }
+  .gu-compare-check{ display:block; margin-bottom:6px; color:var(--leaf-mid); font-family:Arial,sans-serif; font-size:21px; font-weight:700; }
+  .gu-compare-note{ margin-top:14px; color:#625d53; font-size:13px; line-height:1.65; text-align:center; }
+  @media(max-width:360px){ .gu-compare th,.gu-compare td{ padding:12px 7px; } .gu-compare,.gu-compare tbody th,.gu-compare td:last-child{ font-size:13px; } .gu-compare thead th{ font-size:14px; } }
+  .compare{ background:var(--cream); border-bottom:2px solid var(--turmeric); }
+  .compare-table{ margin-top:22px; border:1px solid #b8cdbd; overflow:hidden;    border-radius: 15px; background:#fff; }
+  .compare-head, .compare-row{ display:grid; grid-template-columns:1fr 1.45fr 1.45fr; margin:0; gap:0; }
+  .compare-head > div{ min-height:78px; display:flex; align-items:center; justify-content:center; padding:10px 6px; background:var(--leaf-dark); color:var(--cream); text-align:center; font-size:16px; line-height:1.2; font-weight:700; border-right:1px solid rgba(255,255,255,.2); }
+  .compare-head > div:last-child{ border-right:0; }
+  .compare-head .brand-cell{ font-size:12px; font-weight:500; justify-content:flex-start; text-align:left; }
+  .compare-row > div{ min-height:70px; display:flex; align-items:center; padding:11px 8px; border-top:1px solid #b8cdbd; border-right:1px solid #b8cdbd; font-size:14px; line-height:1.25; }
+  .compare-row > div:last-child{ border-right:0; }
+  .compare-row .compare-label{ color:var(--ink); font-weight:600; background:#f8fcf8; }
+  .compare-row .compare-good{ background:#d9f7e4; color:var(--leaf-dark); font-weight:600; }
+  .compare-row .compare-bad{ background:#f8fcf8; color:var(--ink); }
+  .compare-good::before, .compare-bad::before{ flex:0 0 auto; width:21px; height:21px; display:flex; align-items:center; justify-content:center; margin-right:6px; border-radius:50%; font-size:15px; font-weight:700; }
+  .compare-good::before{ content:"✓"; color:#42b978; border:2px solid #6bd497; }
+  .compare-bad::before{ content:"×"; color:var(--brick); border:2px solid #d17a69; }
+  .compare-final{
+    margin-top:24px; text-align:center;
+    background:var(--leaf-dark); color:var(--cream);
+    padding:20px 18px; border-radius:8px 30px 8px 30px;
+  }
+  .compare-final strong{ font-size:20px; color:var(--turmeric); display:block; margin-bottom:6px; }
+  .compare-final p{ font-size:17px; color:#efeada; }
+
+  /* ============ TESTIMONIALS ============ */
+  .testi{ background:linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%); padding:38px 22px 46px; border-bottom:2px solid var(--turmeric);}
+  .testi .eyebrow{ color:var(--turmeric-deep); }
+  .testi .eyebrow::before, .testi .eyebrow::after{ background:var(--turmeric-deep); }
+  .testi .sub-heading{ color:var(--leaf-dark); }
+  .testi-slider{ position:relative; margin:20px 25px 0; }
+  .testi-viewport{ overflow:hidden; border-radius:21px; }
+  .testi-track{ display:flex; transition:transform .45s ease; }
+  .testi-card{
+    display:flex;
+    gap:0;
+    flex:0 0 100%;
+    min-width:0;
+    min-height:300px;
+    background:#fff;
+    border:2px solid var(--turmeric);
+    border-radius:21px;
+    overflow:hidden;
+    align-items:stretch;
+    box-shadow:0 16px 28px rgba(31,75,58,.15);
+  }
+  .testi-img{ flex:0 0 43%; width:43%; background:var(--leaf-dark); position:relative; }
+  .testi-img .frame{ width:100%; height:100%; min-height:150px; border-radius:0; }
+  .testi-img video{ width:100%; height:100%; object-fit:cover; display:block; }
+  .testi-sound{ position:absolute; right:9px; bottom:9px; width:36px; height:36px; border-radius:50%; background:rgba(31,75,58,.88); color:var(--cream); font-size:17px; z-index:1; }
+  .testi-body{ flex:1; padding:20px 14px 16px 16px; min-width:0; }
+  .testi-quote{ color:var(--turmeric); font-family:Georgia, serif; font-size:31px; line-height:.7; font-weight:700; }
+  .testi-body h4{ font-size:17px; color:var(--leaf-dark); font-weight:700; margin-top:9px; }
+  .testi-body span{ font-size:14px; color:var(--turmeric-deep); display:block; margin:5px 0 9px; }
+  .testi-body span::before{ content:"●"; font-size:10px; margin-right:5px; }
+  .testi-body p{ font-size:16px; line-height:1.45; color:var(--ink); }
+  .stars{ color:var(--turmeric); font-size:15px; margin-bottom:5px; letter-spacing:1px; }
+  .testi-arrow{ position:absolute; top:50%; width:40px; height:40px; transform:translateY(-50%); border-radius:50%; background:var(--leaf-mid); color:#fff; font-family:Arial, sans-serif; font-size:30px; line-height:34px; z-index:2; box-shadow:0 5px 12px rgba(31,75,58,.2); }
+  .testi-arrow.prev{ left:-45px; }
+  .testi-arrow.next{ right:-45px; }
+  .testi-dots{ display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .testi-dot{ width:8px; height:8px; border-radius:50%; background:rgba(62,122,92,.25); padding:0; }
+  .testi-dot.active{ width:22px; border-radius:8px; background:var(--leaf-mid); }
+
+  /* ============ OFFER / CTA ============ */
+  .offer{
+    background:var(--cream);
+    color:var(--ink);
+    text-align:center;
+    padding:34px 0 28px;
+  }
+  .offer .eyebrow{ justify-content:center; padding:0 26px; color:var(--turmeric-deep); font-size:20px; letter-spacing:.12em; }
+  .offer h1.main-heading{ color:var(--leaf-dark); text-align:center; padding:0 26px; font-size:27px; line-height:1.2;  }
+  .offer-layout{ display:grid; grid-template-columns:1fr 1fr; margin-top:18px; min-height:315px; }
+  .offer-visual{ display:flex; align-items:center; justify-content:center; padding:18px 10px; background:var(--cream-2); }
+  .offer-frame{ width:100%; height:auto; max-width:290px; aspect-ratio:1; margin:0; border-radius:0; border:0; }
+  .offer-frame img{ width:100%; height:100%; object-fit:cover; }
+  .offer-benefits{ padding:26px 15px; background:var(--leaf-dark); color:var(--cream); text-align:left; }
+  .offer-benefits-title{ color:#E7C77B; font-size:16px;  text-transform:uppercase; margin-bottom:10px; }
+  .offer-checks{ display:flex; flex-direction:column; gap:0; margin:0; }
+  .offer-checks span{ display:flex; align-items:center; justify-content:space-between; gap:6px; padding:13px 0; border-bottom:1px solid rgba(255,255,255,.2); font-size:16px; line-height:1.1; }
+  .offer-checks span::after{ content:"✓"; flex:0 0 auto; width:17px; height:17px; display:flex; align-items:center; justify-content:center; border-radius:4px; background:var(--turmeric); color:var(--leaf-dark); font-weight:700; }
+  .offer-cta-panel{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin:0 14px; padding:13px 12px; background:var(--turmeric); border:1px solid var(--line); box-shadow:0 7px 15px rgba(31,75,58,.13); text-align:left; }
+  .offer-cta-label{ color:var(--turmeric-deep); font-size:10px; font-weight:600; line-height:1.2; }
+  .offer-cta-label strong{ display:block; color:var(--leaf-dark); font-size:18px; }
+  .buyget{ display:block; width:calc(100% - 28px); max-width:none; margin:14px auto 0; padding:18px 18px 18px 10px; color:var(--cream); background:rgb(240, 21, 21); border-radius:8px; font-size:22px; font-weight:700; line-height:1.2; text-align:center; box-shadow:0 8px 16px rgba(180,86,47,.28); 
+     }
+     .buyget span{
+       display:inline-block;
+       animation:buyget-pop 1.8s ease-in-out infinite;
+     }
+  @keyframes buyget-pop{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.08); } }
+  .cta-btn{
+    display:inline-block;
+    background:var(--leaf-dark);
+    color:var(--cream);
+    font-weight:700;
+    font-size:18px;
+    padding:12px 14px;
+    border-radius:0;
+    white-space:nowrap;
+  }
+
+  /* ============ ORDER FORM ============ */
+  #orderForm{ padding:44px 18px; background:linear-gradient(145deg,var(--cream-2),#ead9b5); }
+  #orderForm .order-card{ padding:30px 20px 0; border-radius:24px; border:1px solid var(--leaf-soft); overflow:visible; box-shadow:0 18px 35px rgba(31,75,58,.18); }
+  #orderForm .order-badge{ letter-spacing:0; white-space:nowrap; padding:7px 20px; font-size:16px; border-radius:24px; }
+  .order-product-display{ position:relative; display:flex; flex-direction:column; align-items:center; padding:18px 12px 14px; margin:4px 0 22px; border-radius:18px; background:radial-gradient(ellipse at center,#fffdf4,var(--cream-2)); }
+  .order-product-display img{ display:block; width:100%; max-width:240px; height:220px; object-fit:contain; border-radius:12px; }
+  .order-product-tag{ display:inline-block; margin-top:8px; padding:5px 14px; background:#e0e9d9; color:var(--leaf-dark); border-radius:20px; font-size:13px; font-weight:600; }
+  #orderForm .sub-heading{ padding:0; margin:0 0 12px; border:0; text-align:center; font-size:27px; line-height:1.55; }
+  #orderForm .sub-heading span{ color:var(--turmeric); }
+  .order-intro{ color:#e0eadd; font-size:15px; line-height:1.75; }
+  #orderForm .order-form{ margin-top:24px; gap:7px; }
+  #orderForm .order-details-title{ font-size:18px; padding-bottom:10px; margin-bottom:9px; }
+  #orderForm .field{ display:flex; flex-direction:column; align-items:stretch; gap:7px; padding:0; background:transparent; }
+  #orderForm .field label{ color:var(--cream); font-size:14px; }
+  #orderForm .field input{ min-width:0; min-height:50px; padding:12px 14px; border:2px solid transparent; border-radius:10px; background:var(--cream); color:var(--ink); font-size:16px; }
+  #orderForm .field input:focus{ outline:2px solid var(--turmeric); outline-offset:2px; }
+  #orderForm .field input::placeholder{ color:#756e60; opacity:1; }
+  #orderForm .err{ display:block; text-align:left; color:#ffd3bf; font-size:13px; line-height:1.6; }
+  #orderForm .err:empty{ display:none; }
+  #orderForm .field~.field{ margin-top:9px; }
+  #orderForm .submit-btn{ margin-top:12px; padding:15px; min-height:54px; border-radius:12px; font-size:19px; }
+  #orderForm .submit-btn:focus-visible{ outline:2px solid var(--cream); outline-offset:3px; }
+  #orderForm .order-privacy{ margin:8px 0 17px; font-size:12px; line-height:1.7; }
+  #orderForm .order-footer{ gap:12px; padding:14px 0; font-size:12px; line-height:1.6; }
+  @media(max-width:360px){ #orderForm .order-card{ padding:28px 15px 0; } #orderForm .sub-heading{ font-size:24px; } .order-product-display img{ height:190px; } }
+  .order{ background:var(--turmeric-deep); padding:38px 20px 52px; text-align:center; }
+  .order-card{ position:relative; width:100%; max-width:380px; margin:0 auto; padding:30px 16px 0; background:var(--leaf-dark); border:1px solid #cad6c6; border-radius:10px; box-shadow:0 12px 25px rgba(31,75,58,.2); overflow:visible; }
+  .order-badge{ position:absolute; top:-13px; left:50%; transform:translateX(-50%); display:inline-block; min-width:122px; padding:8px 20px; background:var(--turmeric); color:var(--leaf-dark); border:3px solid var(--leaf-dark); border-radius:10px; font-size:17px; font-weight:700; letter-spacing:.12em; box-shadow:0 5px 10px rgba(0,0,0,.18); z-index:2; }
+  .order .sub-heading{ color:var(--cream); text-align:left; font-size:24px; line-height:1.12; padding-bottom:14px; padding-top: 20px; border-bottom:1px solid rgba(255,255,255,.2); }
+  .order-form{ margin-top:14px; display:flex; flex-direction:column; gap:10px; }
+  .order-details-title{ color:var(--cream); text-align:left; font-size:16px; font-weight:600; margin-bottom:2px; border-bottom:1px solid rgba(255,255,255,.2); padding-bottom:8px; }
+  .field{ display:grid; grid-template-columns:60px 1fr; align-items:center;  padding:0 10px; background:var(--cream); border-radius:8px; text-align:left; min-height:39px; }
+  .field label{ font-size:13px; font-weight:600; color:var(--leaf-dark); }
+  .field input{
+    font-size:17px;
+    padding:10px 8px;
+    border:0;
+    background:transparent;
+    font-family:inherit;
+    width:100%;
+  }
+  .field input:focus{ outline:none; }
+  .field .err{ font-size:13px; color:var(--brick); min-height:16px; }
+  .submit-btn{
+    margin-top:3px;
+    background:var(--turmeric);
+    color:var(--leaf-dark);
+    font-size:18px;
+    font-weight:700;
+    padding:11px 12px;
+    border-radius:8px;
+    position:relative;
+    text-align:left;
+  }
+  .submit-btn::after{ content:"→"; float:right; padding:2px 8px; margin-top:-3px; background:#e4bf79; color:var(--leaf-dark); border-radius:5px; font-size:18px; }
+  .submit-btn[disabled]{ opacity:.85; cursor:not-allowed; }
+  .spinner{
+    width:18px; height:18px;
+    border:2.5px solid rgba(255,255,255,.35);
+    border-top-color:#fff;
+    border-radius:50%;
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:8px;
+    animation:spin .8s linear infinite;
+    display:none;
+  }
+  .submit-btn.loading .spinner{ display:inline-block; }
+  .submit-btn.loading .btn-label{ opacity:.85; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .order-privacy{ font-size:10px; color:#dbe8d8; text-align:center; margin:0 0 14px; }
+  .order-privacy::before{ content:"✓"; display:inline-flex; align-items:center; justify-content:center; width:12px; height:12px; margin-right:4px; border-radius:50%; background:var(--leaf-mid); color:var(--cream); }
+  .order-footer{ display:flex; justify-content:space-between; padding:9px 0; border-top:1px solid rgba(255,255,255,.18); color:var(--cream); font-size:9px; font-weight:700; text-transform:uppercase; }
+
+  /* ============ REDIRECT OVERLAY (blur + spinner before Thank You page) ============ */
+  .redirect-overlay{
+    position:fixed; inset:0;
+    max-width:450px; margin:0 auto;
+    background:rgba(251,246,234,.72);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    display:none;
+    align-items:center; justify-content:center;
+    z-index:120;
+    text-align:center;
+  }
+  .redirect-overlay.show{ display:flex; }
+  .redirect-box{ display:flex; flex-direction:column; align-items:center; gap:14px; }
+  .redirect-ring{
+    width:52px; height:52px;
+    border:4px solid rgba(31,75,58,.18);
+    border-top-color:var(--leaf-dark);
+    border-radius:50%;
+    animation:spin .9s linear infinite;
+  }
+  .redirect-box p{ font-size:16px; font-weight:600; color:var(--leaf-dark); }
+
+  /* ============ FAQ ============ */
+  .faq{ background:#eef6ef; padding:38px 26px 48px 28px; }
+  .faq .sub-heading{ margin-bottom:22px; }
+  .faq-item{
+    position:relative;
+    border-radius:0;
+    margin-top:0;
+    overflow:hidden;
+    border:0;
+    border-top:1px solid rgba(42,38,32,.16);
+    box-shadow:0 3px 7px rgba(42,38,32,.1);
+  }
+  .faq-item:nth-of-type(1){ background:#dcecdf !important; }
+  .faq-item:nth-of-type(2){ background:#cce3d2 !important; }
+  .faq-item:nth-of-type(3){ background:#b8d8c4 !important; }
+  .faq-item:nth-of-type(4){ background:#a4cdb2 !important; }
+  .faq-number{ position:absolute; left:-28px; top:50%; transform:translateY(-50%); width:56px; height:56px; display:flex; align-items:center; justify-content:center; border:7px solid #eef6ef; border-radius:50%; background:var(--leaf-soft); color:var(--leaf-dark); font-family:Arial,sans-serif; font-size:17px; font-weight:700; z-index:2; box-shadow:0 2px 4px rgba(31,75,58,.18); }
+  .faq-item:nth-of-type(1) .faq-number{ background:#d1e7d6; }
+  .faq-item:nth-of-type(2) .faq-number{ background:#c0dec8; }
+  .faq-item:nth-of-type(3) .faq-number{ background:#aad0b8; }
+  .faq-item:nth-of-type(4) .faq-number{ background:#94c3a4; }
+  .faq-q{
+    width:100%;
+    text-align:left;
+    padding:15px 44px 15px 44px;
+    font-size:17px;
+    font-weight:600;
+    color:var(--leaf-dark);
+    position:relative;
+    background:inherit;
+  }
+  .faq-q::after{
+    content:"+";
+    position:absolute;
+    right:16px; top:50%;
+    transform:translateY(-50%);
+    font-size:22px;
+    color:var(--leaf-mid);
+    transition:transform .35s ease;
+  }
+  .faq-item.open .faq-q::after{ transform:translateY(-50%) rotate(45deg); }
+  .faq-a-wrap{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .38s ease;
+  }
+  .faq-a{ padding:0 24px 16px 44px; font-size:15px; line-height:1.45; color:#4f493f; }
+
+  /* ============ DISCLAIMER ============ */
+  .disclaimer{
+    background:#eef6ef;
+    color:#cfd8ce;
+    font-size:8px;
+    line-height:1.6;
+    padding:6px 22px 80px;
+
+  }
+
+  .disclaimer strong{ color:#cfd8ce; }
+
+  /* ============ STICKY BOTTOM CTA ============ */
+  .sticky-cta{
+    position:fixed;
+    left:50%;
+    bottom:14px;
+    transform:translateX(-50%);
+    width:calc(100% - 32px);
+    max-width:418px;
+    z-index:50;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+    background:var(--cream);
+    border-radius: 12px 12px 10px 10px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 14px 30px -10px rgba(0,0,0,.4);
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .sticky-cta.hide-sticky{ transform:translateX(-50%) translateY(140%); opacity:0; }
+  .sticky-offer-strip{ display:block; height:28px; padding:0 8px; overflow:hidden; background:var(--leaf-mid); color:var(--cream); text-align:center; font-size:15px; font-weight:700; line-height:28px; }
+  .sticky-offer-track{ display:flex; width:100%; flex-direction:column; animation:sticky-offer-scroll 5s ease-in-out infinite; }
+  .sticky-offer-track span{ display:block; height:28px; white-space:nowrap; }
+  .sticky-offer-track .buy-one-get-one{ width:calc(100% + 16px); margin-left:-8px; color:var(--leaf-dark); background:var(--turmeric); border-radius:0; letter-spacing:.08em; text-align:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,.3); }
+  @keyframes sticky-offer-scroll{ 0%,28%{ transform:translateY(0); } 45%,62%{ transform:translateY(-28px); } 79%,100%{ transform:translateY(-56px); } }
+  .sticky-main-row{ display:flex; align-items:center; gap:8px; padding:7px 8px; }
+  .sticky-product-image{ width:66px; height:66px; flex:0 0 66px; object-fit:contain; background:var(--cream); border-radius:7px; padding:2px; }
+  .sticky-product-info{ min-width:0; flex:1; color:var(--ink); line-height:1.05; }
+  .sticky-product-info strong{ display:block; font-size:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .sticky-product-info small{ display:block; margin-top:3px; color:var(--leaf-mid); font-size:11px; }
+  .sticky-price{ display:block; margin-top:3px; color:var(--leaf-dark); font-size:15px; font-weight:700; }
+  .sticky-cta button{
+    background:var(--leaf-dark);
+    color:var(--cream);
+    font-weight:700;
+    font-size:15px;
+    padding:11px 20px;
+    border-radius:8px;
+    white-space:nowrap;
+  }
+  .sticky-trust-row{ display:flex; justify-content:space-around; gap:6px; padding:5px 4px; background:var(--cream-2); border-top:1px solid var(--line); color:var(--leaf-mid); font-size:10px; font-weight:600; }
+
+  /* ============ MOBILE OPTIMIZATION ============ */
+  /* Layout/positions stay identical to desktop — only font, image & video
+     sizes scale down for smaller screens. */
+  @media (max-width:480px){
+    section{ padding:34px 18px; }
+    p{ font-size:15.5px; line-height:1.6; }
+    .eyebrow{ font-size:18px; gap:8px; margin-bottom:12px; }
+    .eyebrow::before, .eyebrow::after{ width:16px; }
+    h1.main-heading{ font-size:24px; margin-bottom:13px; }
+    h2.sub-heading{ font-size:22px; margin-bottom:10px; }
+
+    /* pain section */
+    .pain{ padding:24px 18px 22px; }
+    .pain-title{ font-size:22px; }
+    .pain-subtitle{ font-size:18px; }
+    .specimen{ min-height:120px; padding:11px 10px 11px 62px; }
+    .specimen-img{ width:108px; height:108px; }
+    .specimen-text{ padding-left:78px; font-size:15.5px; }
+    .pain-footer .lede{ font-size:16px; }
+    .pain-footer p{ font-size:14.5px; }
+
+    /* solution / orbit */
+    .solution{ padding:26px 18px 0; }
+    .solution-eyebrow{ font-size:17px; }
+    .solution-kicker{ font-size:21px; }
+    .orbit-stage{ width:270px; height:270px; }
+    .product-photo{ top:48px; left:48px; width:174px; height:174px; padding:7px; }
+    .orbit-icon{ width:46px; height:46px; }
+    .orbit-icon svg{ width:20px; height:20px; }
+    .orbit-icon.i1{ top:6px; left:112px; }
+    .orbit-icon.i2{ top:172px; left:213px; }
+    .orbit-icon.i3{ top:172px; left:12px; }
+    .orbit-label{ font-size:10px; width:76px; }
+    .orbit-label.l1{ top:54px; left:96px; }
+    .orbit-label.l2{ top:220px; left:184px; }
+    .orbit-label.l3{ top:220px; left:0; }
+    .badge-natural{ top:18px; right:14px; font-size:10px; padding:6px 9px; }
+    .brand-name{ font-size:21px; }
+    .brand-tag{ font-size:15.5px; }
+    .solution-body p{ font-size:15.5px; }
+    .tag-pill{ font-size:12px; padding:5px 10px; }
+
+    /* how it works */
+    .works > .eyebrow{ font-size:18px; }
+    .works > .sub-heading{ font-size:17px; }
+    .work-text{ padding:14px 12px; }
+    .work-text h3{ font-size:15.5px; margin-bottom:10px; }
+    .work-text p{ font-size:14px; }
+
+    /* doctor video cards */
+    .doctor-review-grid{ gap:9px; }
+    .doctor-review-title{ font-size:15px; }
+    .doctor-review-name{ font-size:18px; }
+    .doctor-review-copy{ font-size:11px; }
+    .doctor-review-rating{ font-size:11px; padding:4px 7px; }
+
+    /* doctor + patient slider */
+    .doctor-slider{ min-height:190px; gap:8px; }
+    .doctor-video-label{ font-size:12px; }
+
+    /* ingredients */
+    .ing-card h4{ font-size:16px; }
+    .ing-card p{ font-size:13px; }
+    .ing-strap{ font-size:14px; padding:14px 12px; }
+
+    /* certificate */
+    .cert-flex .frame{ width:100px; height:100px; }
+    .cert-list li{ font-size:14.5px; }
+
+    /* compare table */
+    .compare-head > div{ font-size:13px; min-height:64px; }
+    .compare-row > div{ font-size:12px; padding:9px 6px; min-height:60px; }
+    .compare-final strong{ font-size:17px; }
+    .compare-final p{ font-size:14.5px; }
+
+    /* testimonials */
+    .testi{ padding:32px 18px 38px; }
+    .testi-slider{ margin:16px 8px 0; }
+    .testi-card{ min-height:250px; }
+    .testi-quote{ font-size:26px; }
+    .testi-body{ padding:14px 10px 12px 12px; }
+    .testi-body h4{ font-size:15px; }
+    .testi-body span{ font-size:12.5px; }
+    .testi-body p{ font-size:13.5px; }
+    .testi-arrow{ width:32px; height:32px; font-size:24px; line-height:28px; }
+    .testi-arrow.prev{ left:-6px; }
+    .testi-arrow.next{ right:-6px; }
+
+    /* offer */
+    .offer-layout{ min-height:250px; }
+    .offer-frame{ max-width:220px; }
+    .offer-benefits-title{ font-size:13px; }
+    .offer-checks span{ font-size:14px; padding:10px 0; }
+    .offer-cta-label strong{ font-size:15px; }
+    .cta-btn{ font-size:15px; padding:10px 12px; }
+
+    /* order form */
+    .order .sub-heading{ font-size:19px; }
+    .order-details-title{ font-size:14px; }
+    .field label{ font-size:12px; }
+    .field input{ font-size:15px; }
+    .submit-btn{ font-size:15px; }
+
+    /* youtube */
+    .yt-caption{ font-size:15px; }
+    .yt-note{ font-size:12.5px; }
+
+    /* faq */
+    .faq{ padding:32px 20px 40px 22px; }
+    .faq-q{ font-size:14.5px; padding:13px 40px 13px 40px; }
+    .faq-a{ font-size:13px; padding:0 20px 14px 40px; }
+    .faq-number{ width:44px; height:44px; font-size:14px; left:-22px; }
+
+    /* sticky bottom CTA */
+    .sticky-offer-strip{ font-size:12px; }
+    .sticky-product-image{ width:52px; height:52px; flex:0 0 52px; }
+    .sticky-product-info strong{ font-size:10px; }
+    .sticky-product-info small{ font-size:9.5px; }
+    .sticky-price{ font-size:13px; }
+    .sticky-cta button{ font-size:13px; padding:9px 15px; }
+    .sticky-trust-row{ font-size:9px; }
+  }
+
+  @media (max-width:480px){
+    section{ padding:30px 14px; }
+    .solution{ padding:24px 14px 0; }
+    .orbit-stage{ width:236px; height:236px; }
+    .product-photo{ top:42px; left:42px; width:152px; height:152px; padding:6px; }
+    .orbit-icon{ width:40px; height:40px; }
+    .orbit-icon svg{ width:17px; height:17px; }
+    .orbit-icon.i1{ top:4px; left:98px; }
+    .orbit-icon.i2{ top:150px; left:187px; }
+    .orbit-icon.i3{ top:150px; left:10px; }
+    .orbit-label{ font-size:9px; width:68px; }
+    .orbit-label.l1{ top:46px; left:84px; }
+    .orbit-label.l2{ top:192px; left:162px; }
+    .orbit-label.l3{ top:192px; left:0; }
+    .badge-natural{ top:16px; right:12px; font-size:9px; padding:5px 8px; }
+    h1.main-heading{ font-size:21px; }
+    h2.sub-heading{ font-size:19px; }
+    .video-block2 .frame, .cert-flex .frame{ width:92px; height:92px; }
+    .order-badge{font-size: 15px !important;}
+  }
+
+
+
+
+
+   /* policy */
+
+    .pl-wrap {
+      max-width: 450px;
+      width: 100%;
+      margin-bottom: 80px;
+      margin-top: -90px;
+      padding: 8px 12px;
+      box-sizing: border-box
+    }
+
+    .pl-row {
+      display: flex;
+      gap: 0;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .pl-link {
+      background: none;
+      border: none;
+      font-size: 7px;
+      opacity: 0.44;
+      font-weight: 500;
+      color: #267156;
+      cursor: pointer;
+      padding: 4px 5px;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-family: inherit;
+      white-space: nowrap;
+      transition: color .15s
+    }
+
+    .pl-link:hover {
+      color: #1a5240
+    }
+
+    .pl-sep {
+      color: #c9ddd7;
+      font-size: 11px;
+      user-select: none
+    }
+
+    .pp-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center
+    }
+
+    .pp-overlay.show {
+      display: flex
+    }
+
+    .pp-modal {
+      background: #fff;
+      border-radius: 18px;
+      max-width: 420px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 22px 18px 18px;
+      position: relative
+    }
+
+    .pp-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: #e6f3ed;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #267156;
+      font-size: 16px
+    }
+
+    .pp-close:hover {
+      background: #c9ddd7
+    }
+
+    .pp-mtitle {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a5240;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .pp-mtitle i {
+      font-size: 20px
+    }
+
+    .pp-mbadge {
+      display: inline-block;
+      background: #e6f3ed;
+      color: #267156;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px
+    }
+
+    .pp-mpara {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 10px
+    }
+
+    .pp-mlist {
+      padding-left: 0;
+      list-style: none;
+      margin: 0 0 10px
+    }
+
+    .pp-mlist li {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+      padding: 5px 0 5px 20px;
+      position: relative;
+      border-bottom: 1px dashed #e2ede9
+    }
+
+    .pp-mlist li:last-child {
+      border-bottom: none
+    }
+
+    .pp-mlist li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 13px;
+      width: 7px;
+      height: 7px;
+      background: #39ad7d;
+      border-radius: 50%
+    }
+
+    .pp-mhl {
+      background: #e6f3ed;
+      border-left: 3px solid #267156;
+      border-radius: 0 8px 8px 0;
+      padding: 9px 13px;
+      font-size: 13px;
+      color: #1a5240;
+      margin-bottom: 10px
+    }
+
+    .pp-cgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px
+    }
+
+    .pp-citem {
+      background: #f4faf7;
+      border: 1px solid #c9ddd7;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center
+    }
+
+    .pp-citem i {
+      font-size: 20px;
+      color: #267156;
+      display: block;
+      margin-bottom: 4px
+    }
+
+    .pp-citem .pp-clbl {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 2px
+    }
+
+    .pp-citem .pp-cval {
+      font-size: 11px;
+      font-weight: 600;
+      color: #1a5240
+    }
+
+    @media (max-width:480px) {
+      .pl-wrap {
+        padding: 8px 4px
+      }
+
+      .pl-link {
+        font-size: 6px;
+        padding: 4px 2px
+      }
+
+      .pl-sep {
+        font-size: 6px
+      }
+    }
+  .customer-reviews{ padding:38px 16px; background:linear-gradient(180deg,var(--cream),#eee6d3); }
+  .customer-reviews .eyebrow{ letter-spacing:0; font-size:18px; }
+  .customer-reviews .sub-heading{ font-size:26px; line-height:1.5; }
+  .customer-reviews-intro{ margin:0 auto 24px; color:#625d53; font-size:15px; text-align:center; }
+  .customer-review-list{ display:grid; gap:20px; }
+  .customer-review-card{ display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); align-items:stretch; overflow:hidden; border:1px solid #ccd5bd; border-radius:18px; background:#fffdf8; box-shadow:0 10px 24px rgba(31,75,58,.09); }
+  .customer-review-copy{ position:relative; display:flex; flex-direction:column; min-width:0; padding:18px 14px; background:linear-gradient(145deg,#fffdf8,#f7f3e8); }
+  .customer-review-quote{ position:absolute; top:4px; right:12px; font:55px Georgia,serif; line-height:1; color:#dbe5d2; }
+  .customer-review-stars{ position:relative; color:#a9691b; font:15px/1.5 Arial,sans-serif; letter-spacing:2px; margin-bottom:10px; }
+  .customer-review-copy blockquote{ position:relative; margin:0 0 16px; color:var(--ink); font-size:14px; line-height:1.75; overflow-wrap:anywhere; }
+  .customer-review-person{ margin-top:auto; padding-top:12px; border-top:1px solid var(--line); }
+  .customer-review-person h3{ font-size:17px; line-height:1.5; color:var(--leaf-dark); }
+  .customer-review-person>span{ font-size:13px; color:#756e60; }
+  .customer-review-photo{ position:relative; display:flex; align-self:stretch; min-width:0; margin:0; padding:0; overflow:hidden; background:var(--cream-2); border-left:1px solid #d5dfc8; }
+  .customer-review-image{ position:relative; flex:1; width:100%; min-width:0; height:100%; overflow:hidden; padding:0; border:0; border-radius:0; }
+  .customer-review-image img{ position:absolute; inset:0; display:block; width:100%; height:100%; max-width:none; object-fit:cover; object-position:center; border-radius:0; }
+  @media(max-width:360px){ .customer-reviews{ padding:32px 12px; } .customer-review-card{ grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); } .customer-review-copy{ padding:15px 11px; } .customer-review-copy blockquote{ font-size:14px; line-height:1.75; } .customer-review-photo{ padding:0; } }
+</style>
+</head>
+<body>
+
+<div class="page" id="page">
+
+  <!-- TOP BANNER -->
+ 
+  <!-- 1. HERO -->
+   <header class="hero-banner" aria-label="હર્બલ ડાયબ કેર" lang="gu">
+     <img src="images/banner.png" alt="હર્બલ ડાયબ કેર વિશે જીતેન્દ્રભાઈનો અનુભવ અને પ્રોડક્ટની માહિતી" width="941" height="1672" fetchpriority="high">
+   </header>
+
+  <!-- 2. DIABETES SYMPTOMS -->
+  <section class="pain" id="pain" lang="gu">
+    <div class="pain-header">
+      <h2 class="pain-title"><span class="accent">ડાયાબિટીસનાં</span> લક્ષણો</h2>
+      <div class="pain-subtitle">શું તમને પણ આ લક્ષણો અનુભવાય છે?</div>
+    </div>
+    <!-- Replace each image src below with your symptom image in the images folder. -->
+    <div class="specimen-list">
+      <div class="specimen"><span class="specimen-tag">01</span><span class="specimen-index">01</span><div class="specimen-img"><img src="images/symp1.jpg" alt="" loading="lazy"></div><div class="specimen-text">આંખમાં <b>ઝાંખું દેખાવું</b></div></div>
+      <div class="specimen"><span class="specimen-tag">02</span><span class="specimen-index">02</span><div class="specimen-img"><img src="images/symp2.jpg" alt="" loading="lazy"></div><div class="specimen-text">પગમાં <b>ખાલી ચડવી</b></div></div>
+      <div class="specimen"><span class="specimen-tag">03</span><span class="specimen-index">03</span><div class="specimen-img"><img src="images/symp3.jpg" alt="" loading="lazy"></div><div class="specimen-text"><b>થાક</b> અને ઊર્જાનો અભાવ</div></div>
+      <div class="specimen"><span class="specimen-tag">04</span><span class="specimen-index">04</span><div class="specimen-img"><img src="images/symp4.jpg" alt="" loading="lazy"></div><div class="specimen-text">વારંવાર <b>પેશાબ જવું પડે</b></div></div>
+    </div>
+  </section>
+
+    <!-- 6. INGREDIENTS -->
+  <section class="ingredients" id="ingredients" lang="gu">
+    <p class="eyebrow">ઘટકો</p>
+   
+    <img class="ingredients-hero-image" src="images/ing.png" alt="હર્બલ ડાયબ કેરમાં વપરાતા આયુર્વેદિક ઘટકો" loading="lazy">
+  <h2 class="ingredients-detail-heading">જાણો આ ઘટકો કેવી રીતે મદદ કરે છે</h2>
+    <div class="ing-grid">
+      <div class="ing-card">
+        <span class="ing-icon" aria-hidden="true">✿</span><h4>ગુડમાર</h4>
+        <p><b>લોહીમાં શર્કરાનું સ્વસ્થ સ્તર</b> અને ચયાપચયના સ્વાસ્થ્ય માટે આયુર્વેદિક ઔષધિ.</p>
+      </div>
+      <div class="ing-card">
+        <span class="ing-icon" aria-hidden="true">✦</span><h4>કારેલાં</h4>
+        <p><b>લોહીમાં શર્કરાના સ્તરના સ્વસ્થ વ્યવસ્થાપન</b> અને ચયાપચયના સંતુલન માટે વનસ્પતિ.</p>
+      </div>
+      <div class="ing-card">
+        <span class="ing-icon" aria-hidden="true">✤</span><h4>મેથી</h4>
+        <p>કુદરતી રેસાથી ભરપૂર, <b>લોહીમાં શર્કરાના સ્વસ્થ સ્તર અને ચયાપચયના સ્વાસ્થ્ય</b> માટે.</p>
+      </div>
+      <div class="ing-card">
+        <span class="ing-icon" aria-hidden="true">◆</span><h4>જાંબુનાં બીજ</h4>
+        <p><b>લોહીમાં શર્કરાના સ્વસ્થ સ્તર અને ચયાપચયના સંતુલન</b> માટે આયુર્વેદિક ઘટક.</p>
+      </div>
+      <div class="ing-card">
+        <span class="ing-icon" aria-hidden="true">✥</span><h4>વિજયસાર</h4>
+        <p><b>લોહીમાં શર્કરાના સ્તરના વ્યવસ્થાપન અને ચયાપચયના સ્વાસ્થ્ય</b> માટે પરંપરાગત ઔષધિ.</p>
+      </div>
+      <div class="ing-card">
+        <span class="ing-icon" aria-hidden="true">✧</span><h4>લીમડો</h4>
+        <p><b>ચયાપચયના સ્વાસ્થ્ય અને લોહીમાં શર્કરાના સ્તરને સહાય</b> કરવા માટે આયુર્વેદિક વનસ્પતિ.</p>
+      </div>
+    </div>
+    <p class="ing-strap">પરંપરાગત આયુર્વેદિક જ્ઞાન + દૈનિક સ્વાસ્થ્ય માટે સહાય</p>
+  </section>
+
+  <!-- 3. SOLUTION -->
+  <section class="solution" id="solution">
+    <div class="solution-eyebrow">Ayurvedic Solution</div>
+    <div class="solution-kicker">अब अपनी Blood Sugar Wellness को दें थोड़ा और ध्यान</div>
+    <div class="orbit-stage">
+      <div class="badge-natural">100% Ayurvedic</div>
+      <div class="orbit-ring"></div>
+      <div class="product-photo">
+        <div class="product-photo-inner">
+          <img src="images/product.avif" alt="Herbal Diab Care Product" loading="lazy">
+        </div>
+      </div>
+      <div class="orbit-icon i1" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FBF6EA" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="#FBF6EA" stroke-width="1.4"/><path d="M12 3.4V6M12 18V20.6M3.4 12H6M18 12H20.6" stroke="#FBF6EA" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
+      <div class="orbit-label l1">Balanced Diet</div>
+      <div class="orbit-icon i2" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="14" cy="4.5" r="1.8" fill="#FBF6EA"/><path d="M9 21l2-6 2 1.5L15 21M8 12.5l2-3 3 1 3-1.5M11 9.5L9.5 6.5 6 7.5" stroke="#FBF6EA" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="orbit-label l2">Physical Activity</div>
+      <div class="orbit-icon i3" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 3v6a4 4 0 008 0V3" stroke="#FBF6EA" stroke-width="1.6" stroke-linecap="round"/><path d="M10 13v2a5 5 0 005 5 4 4 0 004-4v-1.2" stroke="#FBF6EA" stroke-width="1.6" stroke-linecap="round"/><circle cx="19" cy="9.5" r="1.9" stroke="#FBF6EA" stroke-width="1.4"/></svg>
+      </div>
+      <div class="orbit-label l3">डॉक्टर की सलाह</div>
+    </div>
+    <div class="solution-body">
+      <h2 class="brand-name">HERBAL <span>Diab CARE</span></h2>
+      <div class="brand-tag">Ayurvedic Herbal Support for Blood Sugar Wellness</div>
+      <p><u>Herbal Diab Care</u> को <u>Blood Sugar Wellness</u> और <u>Healthy Lifestyle Routine</u> के <u>supportive use</u> के लिए <u>Ayurvedic herbal formulation</u> के रूप में <u>position</u> किया जाता है।</p>
+     
+      <div class="tag-row"><span class="tag-pill">Blood Sugar Wellness</span><span class="tag-pill">Ayurvedic Formulation</span><span class="tag-pill">Daily Wellness Routine</span></div>
+    </div>
+  
+  </section>
+
+  <!-- 4. BENEFITS -->
+  <section class="works" id="works" lang="gu">
+    <p class="eyebrow">પ્રોડક્ટના ફાયદા</p>
+    <h2 class="sub-heading center">હર્બલ ડાયબ કેરના ફાયદા</h2>
+    <div class="work-row">
+      <div class="work-frame">
+        <img src="images/benefit1.jpg" alt="બ્લડ શુગરનું નિયંત્રણ" loading="lazy">
+      </div>
+      <div class="work-text">
+        <div class="work-num">01</div>
+        <h3>બ્લડ શુગરનું નિયંત્રણ</h3>
+        <p><b>બ્લડ શુગરનું સ્તર નિયંત્રિત</b> કરવામાં મદદ કરે છે.</p>
+      </div>
+    </div>
+    <div class="work-divider"></div>
+
+    <div class="work-row reverse">
+      <div class="work-frame">
+        <img src="images/benefit2.jpg" alt="શરીરને ઊર્જા" loading="lazy">
+      </div>
+      <div class="work-text">
+        <div class="work-num">02</div>
+        <h3>શરીરને ઊર્જા</h3>
+        <p>શરીરને <b>ઊર્જા આપે છે.</b></p>
+      </div>
+    </div>
+    <div class="work-divider"></div>
+
+    <div class="work-row">
+      <div class="work-frame">
+        <img src="images/benefit3.jpg" alt="પગનાં તળિયાંમાં બળતરા" loading="lazy">
+      </div>
+      <div class="work-text">
+        <div class="work-num">03</div>
+        <h3>પગનાં તળિયાંમાં બળતરા</h3>
+        <p><b>પગનાં તળિયાંમાં થતી બળતરા</b> બંધ કરે છે.</p>
+      </div>
+    </div>
+    <div class="work-divider"></div>
+
+    <div class="work-row reverse">
+      <div class="work-frame">
+        <img src="images/benefit4.jpg" alt="પગમાં ખાલી ચડવી" loading="lazy">
+      </div>
+      <div class="work-text">
+        <div class="work-num">04</div>
+        <h3>પગમાં ખાલી ચડવી</h3>
+        <p><b>પગમાં ખાલી ચડતી</b> બંધ કરે છે.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. DOCTOR VIDEO -->
+  <section class="video-block" id="doctorVideo">
+    <p class="eyebrow">Expert की जुबानी</p>
+    <h2 class="sub-heading center" style="color:var(--cream);">Blood Sugar को लेकर आपकी सबसे बड़ी चिंताओं के जवाब</h2>
+    <div class="doctor-review-grid">
+      <article class="doctor-review-card">
+        <h3 class="doctor-review-title">Doctor Review</h3>
+        <div class="doctor-review-media">
+         <video class="doctor-review-video" src="images/Dr-Kevin4.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+        </div>
+        <div class="doctor-review-name">Dr. Kevin Patel</div>
+        
+      </article>
+      <article class="doctor-review-card">
+        <h3 class="doctor-review-title">Expert Advice</h3>
+        <div class="doctor-review-media">
+          <video class="doctor-review-video" src="images/Dr-2.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+        </div>
+       <div class="doctor-review-name">Dr. Ruchi Gajera</div>
+        
+      </article>
+    </div>
+  </section>
+
+
+
+  <!-- 7. CERTIFICATE -->
+  <section class="cert" id="cert">
+    <p class="eyebrow">Quality Matters</p>
+    <img src="images/certified.avif" alt="">
+  </section>
+
+  <!-- 8. DOCTOR + PATIENT -->
+  <section class="video-block2" id="doctorPatient" lang="gu">
+    <p class="eyebrow">સાચી માહિતી, સાચો અનુભવ</p>
+    <h2 class="sub-heading center">સ્વાસ્થ્ય માટે સાચી સમજ,<br><span class="patient-heading-accent">અનુભવ સાથે</span></h2>
+    <p class="patient-intro">જ્યારે સ્વાસ્થ્યની ચિંતા હોય, ત્યારે સાચી માહિતી અને સાચો અનુભવ બંને જરૂરી છે.</p>
+    <div class="patient-video-grid" aria-label="નિષ્ણાત અને ગ્રાહકના વિડિયો">
+      <article class="patient-video-card">
+        <div class="patient-card-heading"><span class="patient-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3v5a4 4 0 0 0 8 0V3M4 3h4m4 0h4M10 12v3a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="10" r="2"/></svg></span><div><p class="patient-card-kicker">નિષ્ણાતની વાત</p><h3>નિષ્ણાતનું માર્ગદર્શન</h3></div><span class="patient-card-number" aria-hidden="true">01</span></div>
+        <div class="patient-video-media"><video src="images/review-1.mp4" playsinline controls preload="metadata" aria-label="નિષ્ણાતનું માર્ગદર્શન વિડિયો"></video></div>
+      </article>
+      <article class="patient-video-card">
+        <div class="patient-card-heading"><span class="patient-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 11a8 8 0 0 1-8 8H7l-5 3 2-6a8 8 0 0 1-1-5 9 9 0 0 1 18 0Z"/><path d="M8 10h8m-8 4h5"/></svg></span><div><p class="patient-card-kicker">અનુભવની વાત</p><h3>સ્વાસ્થ્યનો વાસ્તવિક અનુભવ</h3></div><span class="patient-card-number" aria-hidden="true">02</span></div>
+        <div class="patient-video-media"><video src="images/review-2.mp4" playsinline controls preload="metadata" aria-label="સ્વાસ્થ્યનો વાસ્તવિક અનુભવ વિડિયો"></video></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 9. COMPARE -->
+  <section class="compare" id="compare" lang="gu">
+    <p class="eyebrow">સરખામણી</p>
+    <h2 class="sub-heading center">અન્ય પ્રોડક્ટ્સ સાથે સરખામણી</h2>
+    <div class="gu-compare-wrap">
+      <table class="gu-compare" aria-describedby="compare-example-note">
+        <thead><tr><th scope="col">વિશેષતા</th><th scope="col">હર્બલ<br>ડાયબ કેર</th><th scope="col">અન્ય પ્રોડક્ટ્સ</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><span class="gu-compare-icon" aria-hidden="true">❧</span>ઘટકો</th><td>કોઈપણ કેમિકલ વિના, આયુર્વેદિક ઘટકોથી બનેલ</td><td>ઘટકોની યાદી તપાસવી જરૂરી</td></tr>
+          <tr><th scope="row"><span class="gu-compare-icon" aria-hidden="true">♡</span>વિશ્વાસ</th><td>હજારો લોકોનો વિશ્વાસ</td><td>ગ્રાહકોના અનુભવો તપાસવા જરૂરી</td></tr>
+          <tr><th scope="row"><span class="gu-compare-icon" aria-hidden="true">✚</span>આડઅસર</th><td>કોઈપણ આડઅસર નથી</td><td>સલામતીની માહિતી તપાસવી જરૂરી</td></tr>
+          <tr><th scope="row"><span class="gu-compare-icon" aria-hidden="true">↘</span>શુગરનું સ્તર</th><td>કુદરતી રીતે શુગરનું સ્તર નિયંત્રિત કરે છે</td><td>અસર અંગેના પુરાવા તપાસવા જરૂરી</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="gu-compare-note" id="compare-example-note">અન્ય પ્રોડક્ટ્સની વિગતો સમજ માટેનાં ઉદાહરણો છે; કોઈ ચોક્કસ બ્રાન્ડ સાથેની ચકાસેલી સરખામણી નથી.</p>
+  </section>
+
+  <!-- 10. TESTIMONIALS -->
+  <section class="testi" id="testimonials" lang="gu">
+    <p class="eyebrow">ગ્રાહકોના અનુભવો</p>
+    <h2 class="sub-heading center">જેમણે પોતાની દૈનિક સ્વાસ્થ્યયાત્રા અમારી સાથે શરૂ કરી</h2>
+
+    <div class="testi-slider" aria-label="ગ્રાહકોના અનુભવો">
+      <button class="testi-arrow prev" type="button" aria-label="પાછલો અનુભવ">&#8249;</button>
+      <div class="testi-viewport">
+        <div class="testi-track">
+          <article class="testi-card"><div class="testi-img"><div class="frame"><video src="images/customer-1.mp4" autoplay muted loop playsinline preload="metadata"></video><button class="testi-sound" type="button" aria-label="અનુભવના વિડિયોનો અવાજ ચાલુ કરો">&#128263;</button></div></div><div class="testi-body"><div class="testi-quote">"</div><h4>રાહુલ મહેતા</h4><span> અમદાવાદ</span><div class="stars">★★★★★</div><p>હું દરરોજ ગ્લુકોઝ મોનિટરથી મારું શુગરનું સ્તર તપાસું છું અને મારી દૈનિક સ્વાસ્થ્યની દિનચર્યામાં હર્બલ ડાયબ કેરનો પણ સમાવેશ કર્યો છે. હવે હું મારા આહાર અને જીવનશૈલી વિશે પણ પહેલાં કરતાં વધુ જાગૃત રહું છું.</p></div></article>
+          <article class="testi-card"><div class="testi-img"><div class="frame"><video src="images/customer-2.mp4" autoplay muted loop playsinline preload="metadata"></video><button class="testi-sound" type="button" aria-label="અનુભવના વિડિયોનો અવાજ ચાલુ કરો">&#128263;</button></div></div><div class="testi-body"><div class="testi-quote">"</div><h4>અમિત વર્મા</h4><span>દિલ્હી</span><div class="stars">★★★★★</div><p>વધતી ઉંમર સાથે હું શુગર અને સમગ્ર સ્વાસ્થ્ય વિશે વધુ જાગૃત થવા લાગ્યો હતો. આ કારણે હર્બલ ડાયબ કેરને મારી દૈનિક સ્વાસ્થ્યની દિનચર્યાનો ભાગ બનાવ્યો અને મારી જીવનશૈલી પર પણ ધ્યાન આપવાનું શરૂ કર્યું.</p></div></article>
+
+          <article class="testi-card"><div class="testi-img"><div class="frame"><video src="images/customer-3.mp4" autoplay muted loop playsinline preload="metadata"></video><button class="testi-sound" type="button" aria-label="અનુભવના વિડિયોનો અવાજ ચાલુ કરો">&#128263;</button></div></div><div class="testi-body"><div class="testi-quote">"</div><h4>રાકેશ શર્મા</h4><span>જયપુર</span><div class="stars">★★★★★</div><p>થોડા સમયથી શુગરને લઈને ઘણી ચિંતા રહેતી હતી. રોજિંદી દિનચર્યામાં પણ ધ્યાન રાખવું પડતું હતું. હર્બલ ડાયબ કેરને મારી દિનચર્યામાં સામેલ કર્યું અને સાથે ખાવા-પીવા તથા જીવનશૈલી પર પણ ધ્યાન આપવાનું શરૂ કર્યું.</p></div></article>
+
+          <article class="testi-card"><div class="testi-img"><div class="frame"><video src="images/customer-4.mp4" autoplay muted loop playsinline preload="metadata"></video><button class="testi-sound" type="button" aria-label="અનુભવના વિડિયોનો અવાજ ચાલુ કરો">&#128263;</button></div></div><div class="testi-body"><div class="testi-quote">"</div><h4>જીતુભાઈ</h4><span>જયપુર</span><div class="stars">★★★★★</div><p>પહેલાં મારું શુગરનું સ્તર ઘણી વાર ઉપર-નીચે રહેતું હતું અને તેને લઈને ચિંતા પણ રહેતી હતી. હર્બલ ડાયબ કેરને મારી દૈનિક સ્વાસ્થ્યની દિનચર્યામાં સામેલ કરવાની સાથે મેં મારા આહાર અને જીવનશૈલી પર પણ ધ્યાન આપવાનું શરૂ કર્યું. લગભગ ૧૦ દિવસમાં મને મારી દિનચર્યામાં ફેરફાર અનુભવાવા લાગ્યો.</p></div></article>
+        </div>
+      </div>
+      <button class="testi-arrow next" type="button" aria-label="આગળનો અનુભવ">&#8250;</button>
+      <div class="testi-dots" role="tablist" aria-label="ગ્રાહકનો અનુભવ પસંદ કરો"><button class="testi-dot active" type="button" aria-label="ગ્રાહકનો અનુભવ ૧"></button><button class="testi-dot" type="button" aria-label="ગ્રાહકનો અનુભવ ૨"></button><button class="testi-dot" type="button" aria-label="ગ્રાહકનો અનુભવ ૩"></button><button class="testi-dot" type="button" aria-label="ગ્રાહકનો અનુભવ ૪"></button></div>
+    </div>
+  </section>
+  <!-- WRITTEN CUSTOMER REVIEWS -->
+  <section class="customer-reviews" id="customerReviews" lang="gu">
+    <p class="eyebrow">લેખિત રિવ્યૂ</p>
+    <h2 class="sub-heading center">ગ્રાહકોના પોતાના શબ્દોમાં</h2>
+    <p class="customer-reviews-intro">હર્બલ ડાયબ કેર સાથેના તેમના અનુભવો વાંચો.</p>
+    <div class="customer-review-list">
+      <article class="customer-review-card">
+        <div class="customer-review-copy">
+          <span class="customer-review-quote" aria-hidden="true">“</span>
+          <div class="customer-review-stars" aria-label="૫ માંથી ૫ સ્ટાર">★★★★★</div>
+          <blockquote>હું દરરોજ ગ્લુકોઝ મોનિટરથી મારું શુગરનું સ્તર તપાસું છું અને મારી દૈનિક સ્વાસ્થ્યની દિનચર્યામાં હર્બલ ડાયબ કેરનો પણ સમાવેશ કર્યો છે. હવે હું મારા આહાર અને જીવનશૈલી વિશે પણ પહેલાં કરતાં વધુ જાગૃત રહું છું.</blockquote>
+          <div class="customer-review-person"><h3>રાહુલ મહેતા</h3><span>અમદાવાદ</span></div>
+        </div>
+        <figure class="customer-review-photo">
+          <!-- Replace this src with a corresponding customer photo when available. -->
+          <div class="customer-review-image"><img src="images/test1.png" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
+        </figure>
+      </article>
+      <article class="customer-review-card">
+        <div class="customer-review-copy">
+          <span class="customer-review-quote" aria-hidden="true">“</span>
+          <div class="customer-review-stars" aria-label="૫ માંથી ૫ સ્ટાર">★★★★★</div>
+          <blockquote>વધતી ઉંમર સાથે હું શુગર અને સમગ્ર સ્વાસ્થ્ય વિશે વધુ જાગૃત થવા લાગ્યો હતો. આ કારણે હર્બલ ડાયબ કેરને મારી દૈનિક સ્વાસ્થ્યની દિનચર્યાનો ભાગ બનાવ્યો અને મારી જીવનશૈલી પર પણ ધ્યાન આપવાનું શરૂ કર્યું.</blockquote>
+          <div class="customer-review-person"><h3>અમિત વર્મા</h3><span>દિલ્હી</span></div>
+        </div>
+        <figure class="customer-review-photo">
+          <!-- Replace this src with a corresponding customer photo when available. -->
+          <div class="customer-review-image"><img src="images/test2.png" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
+        </figure>
+      </article>
+      <article class="customer-review-card">
+        <div class="customer-review-copy">
+          <span class="customer-review-quote" aria-hidden="true">“</span>
+          <div class="customer-review-stars" aria-label="૫ માંથી ૫ સ્ટાર">★★★★★</div>
+          <blockquote>થોડા સમયથી શુગરને લઈને ઘણી ચિંતા રહેતી હતી. રોજિંદી દિનચર્યામાં પણ ધ્યાન રાખવું પડતું હતું. હર્બલ ડાયબ કેરને મારી દિનચર્યામાં સામેલ કર્યું અને સાથે ખાવા-પીવા તથા જીવનશૈલી પર પણ ધ્યાન આપવાનું શરૂ કર્યું.</blockquote>
+          <div class="customer-review-person"><h3>રાકેશ શર્મા</h3><span>જયપુર</span></div>
+        </div>
+        <figure class="customer-review-photo">
+          <!-- Replace this src with a corresponding customer photo when available. -->
+          <div class="customer-review-image"><img src="images/test3.png" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
+        </figure>
+      </article>
+      <article class="customer-review-card">
+        <div class="customer-review-copy">
+          <span class="customer-review-quote" aria-hidden="true">“</span>
+          <div class="customer-review-stars" aria-label="૫ માંથી ૫ સ્ટાર">★★★★★</div>
+          <blockquote>પહેલાં મારું શુગરનું સ્તર ઘણી વાર ઉપર-નીચે રહેતું હતું અને તેને લઈને ચિંતા પણ રહેતી હતી. હર્બલ ડાયબ કેરને મારી દૈનિક સ્વાસ્થ્યની દિનચર્યામાં સામેલ કરવાની સાથે મેં મારા આહાર અને જીવનશૈલી પર પણ ધ્યાન આપવાનું શરૂ કર્યું. લગભગ ૧૦ દિવસમાં મને મારી દિનચર્યામાં ફેરફાર અનુભવાવા લાગ્યો.</blockquote>
+          <div class="customer-review-person"><h3>જીતુભાઈ</h3><span>જયપુર</span></div>
+        </div>
+        <figure class="customer-review-photo">
+          <!-- Replace this src with a corresponding customer photo when available. -->
+          <div class="customer-review-image"><img src="images/test4.png" alt="હર્બલ ડાયબ કેર પ્રોડક્ટની બોટલ" loading="lazy"></div>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <!-- 11. OFFER -->
+  <section class="offer" id="offerSection">
+    <p class="eyebrow">Special Launch Offer</p>
+    <h1 class="main-heading">अपनी Daily Wellness Routine की शुरुआत आज से करें</h1>
+    <div class="offer-layout">
+      <div class="offer-visual"><div class="offer-frame frame frame-blob1">
+        <img src="images/product.avif" alt="Herbal Diab Care" loading="lazy" onerror="this.src='images/product.avif'">
+      </div></div>
+      <div class="offer-benefits">
+        <p class="offer-benefits-title">Ayurvedic Wellness</p>
+        <p class="brand-name" style="color:var(--cream); text-align:left; font-size:20px; line-height:1.05;">HERBAL<br>Diab CARE</p>
+        <div class="offer-checks">
+          <span>Quality Checked</span>
+          <span>Herbal Formula</span>
+          <span>Secure Packaging</span>
+          <span>Free Diet Chart</span>
+         
+          <span>Convenient Daily Routine</span>
+        </div>
+      </div>
+
+    </div>
+    <div>
+<div>
+  <span class="buyget"><span>🎉🎉 Buy 1 Get 1 🎉🎉</span></span>
+</div>
+   
+    <div class="offer-cta-panel">
+      <span class="offer-cta-label"><strong>आज ही अपना Order Place करें</strong></span>
+      <a href="#orderForm" class="cta-btn">ORDER NOW&nbsp; →</a>
+    </div>
+     </div>
+  </section>
+
+  <!-- 12. ORDER FORM -->
+  <section class="order" id="orderForm" lang="gu">
+    <div class="order-card">
+      <span class="order-badge">ઓર્ડર ફોર્મ</span>
+      <div class="order-product-display">
+        <img src="images/product.avif" alt="હર્બલ ડાયબ કેર કેપ્સ્યુલનું પેક" loading="lazy">
+        <span class="order-product-tag">આયુર્વેદિક કેપ્સ્યુલ</span>
+      </div>
+      <h2 class="sub-heading">હર્બલ ડાયબ કેર<br><span>આજે જ ઓર્ડર કરો</span></h2>
+      <p class="order-intro">ઓર્ડર કરવા માટે નીચે તમારું નામ અને મોબાઇલ નંબર ભરો.</p>
+      <form class="order-form" id="orderFormEl" novalidate>
+        <p class="order-details-title">તમારી વિગતો</p>
+        <div class="field">
+          <label for="custName">તમારું પૂરું નામ</label>
+          <input type="text" id="custName" name="name" placeholder="તમારું નામ લખો" autocomplete="name" required aria-describedby="nameErr">
+        </div>
+        <span class="err" id="nameErr" aria-live="polite"></span>
+        <div class="field">
+          <label for="custMobile">મોબાઇલ નંબર</label>
+          <input type="tel" id="custMobile" name="mobile" placeholder="૧૦ અંકનો મોબાઇલ નંબર" inputmode="numeric" maxlength="10" autocomplete="tel" required aria-describedby="mobileErr">
+        </div>
+        <span class="err" id="mobileErr" aria-live="polite"></span>
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="spinner" aria-hidden="true"></span><span class="btn-label">હવે ઓર્ડર કરો</span>
+        </button>
+        <p class="order-privacy">તમારી માહિતીનો ઉપયોગ માત્ર ઓર્ડરની પ્રક્રિયા માટે થાય છે.</p>
+      </form>
+      <div class="order-footer"><span>સરળ ઓર્ડર પ્રક્રિયા</span><span>આયુર્વેદિક ઘટકો</span></div>
+    </div>
+  </section>
+
+  <!-- 13. YOUTUBE -->
+  <section class="yt-block" id="ytSection">
+    <p class="eyebrow">जानिए ज़रूरी बातें</p>
+    <h2 class="sub-heading center">Blood Sugar से जुड़ी जरूरी बातें, जिन्हें हर व्यक्ति को जानना चाहिए</h2>
+    <div class="yt-card">
+      <div class="yt-frame">
+        <iframe src="https://www.youtube.com/embed/0EsBTsrSNsY?rel=0" title="Blood Sugar Wellness video 1" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        <button class="yt-thumb" type="button" aria-label="Play first YouTube video"><img src="https://i.ytimg.com/vi/0EsBTsrSNsY/hqdefault.jpg" alt="First YouTube video thumbnail"></button>
+        <button class="yt-mute" type="button" aria-label="Mute YouTube video"><i class="ti ti-volume-off" aria-hidden="true"></i></button>
+      </div>
+      <div class="yt-caption"><span class="yt-caption-icon" aria-hidden="true">✦</span><span>Diabetes से जुड़ी जरूरी जानकारी</span></div>
+      <p class="yt-note">इस video में Blood Sugar Wellness और daily routine से जुड़ी helpful जानकारी देखें।</p>
+    </div>
+
+    <div class="yt-card">
+      <div class="yt-frame">
+        <iframe src="https://www.youtube.com/embed/FHkk6A3NlCU?rel=0" title="Blood Sugar Wellness video 2" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        <button class="yt-mute" type="button" aria-label="Mute YouTube video"><i class="ti ti-volume-off" aria-hidden="true"></i></button>
+      </div>
+      <div class="yt-caption"><span class="yt-caption-icon" aria-hidden="true">✦</span><span>Daily Routine और Blood Sugar का Connection</span></div>
+      <p class="yt-note">इस video में जानें कि खान-पान, Physical Activity और रोज़मर्रा की habits Blood Sugar Wellness को कैसे प्रभावित कर सकती हैं।</p>
+    </div>
+
+
+    <div class="yt-card">
+      <div class="yt-frame">
+        <iframe src="https://www.youtube.com/embed/N8_4mKkMY5o?rel=0" title="Blood Sugar Wellness video 3" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        <button class="yt-mute" type="button" aria-label="Mute YouTube video"><i class="ti ti-volume-off" aria-hidden="true"></i></button>
+      </div>
+      <div class="yt-caption"><span class="yt-caption-icon" aria-hidden="true">✦</span><span>Diabetes से बचाव के लिए किन बातों का रखें ध्यान?</span></div>
+      <p class="yt-note">इस video में Healthy Lifestyle, Regular Monitoring और Daily Wellness से जुड़ी जरूरी बातें आसान भाषा में समझें।</p>
+    </div>
+  </section>
+
+  <!-- 14. FAQ -->
+  <section class="faq" id="faqSection">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="sub-heading center">अक्सर पूछे जाने वाले सवाल</h2>
+
+    <div class="faq-item" style="background:#F3ECDB;"><span class="faq-number">01</span>
+      <button class="faq-q">Herbal Diab Care क्या है?</button>
+      <div class="faq-a-wrap"><p class="faq-a">यह Blood Sugar Wellness के लिए Ayurvedic Herbal Support Formula है।</p></div>
+    </div>
+
+    <div class="faq-item" style="background:#EFE6F1;"><span class="faq-number">02</span>
+      <button class="faq-q">क्या इसे Healthy Diet के साथ लिया जा सकता है?</button>
+      <div class="faq-a-wrap"><p class="faq-a">हाँ, Balanced Diet और Healthy Lifestyle के साथ इसे अपनी routine में शामिल किया जा सकता है।</p></div>
+    </div>
+
+    <div class="faq-item" style="background:#E7F0E4;"><span class="faq-number">03</span>
+      <button class="faq-q">इसमें कौन-कौन से Ingredients हैं?</button>
+      <div class="faq-a-wrap"><p class="faq-a">इसमें Gudmar, Karela, Methi, Jamun Beej, Vijaysar और Neem जैसे carefully selected Ayurvedic Herbal Ingredients का blend है।</p></div>
+    </div>
+
+    <div class="faq-item" style="background:#FBEADB;"><span class="faq-number">04</span>
+      <button class="faq-q">क्या Herbal Diab Care Diabetes का Cure है?</button>
+      <div class="faq-a-wrap"><p class="faq-a">Herbal Diab Care को Blood Sugar Wellness के supportive herbal formula के रूप में तैयार किया गया है</p></div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="disclaimer" lang="gu">
+    <strong>અસ્વીકરણ:</strong> DiabCare એક આયુર્વેદિક હર્બલ સ્વાસ્થ્ય પ્રોડક્ટ છે. તે ડાયાબિટીસનો ઉપચાર, તેને સંપૂર્ણ મટાડવાનો ઉપાય કે ડૉક્ટરે સૂચવેલી તબીબી સારવારનો વિકલ્પ નથી. ડાયાબિટીસ ધરાવતા લોકોએ ડૉક્ટરની સલાહ, સૂચવેલી દવાઓ, લોહીમાં શુગરના સ્તરની નિયમિત તપાસ, સંતુલિત આહાર અને યોગ્ય શારીરિક પ્રવૃત્તિ ચાલુ રાખવી જોઈએ. કોઈપણ પૂરક આહાર લેવાનું શરૂ કરતાં પહેલાં લાયકાત ધરાવતા આરોગ્ય નિષ્ણાતની સલાહ લો.
+  </section>
+ <div class="pl-wrap" lang="gu">
+      <div class="pl-row">
+        <button class="pl-link" onclick="openModal('privacy')">ગોપનીયતા નીતિ</button>
+        <span class="pl-sep">|</span>
+        <button class="pl-link" onclick="openModal('terms')">નિયમો અને શરતો</button>
+        <span class="pl-sep">|</span>
+        <button class="pl-link" onclick="openModal('shipping')">ડિલિવરી નીતિ</button>
+        <span class="pl-sep">|</span>
+        <button class="pl-link" onclick="openModal('cancel')">ઓર્ડર રદ કરવાની નીતિ</button>
+       
+        <span class="pl-sep">|</span>
+        <button class="pl-link" onclick="openModal('disclaimer')">કાનૂની અસ્વીકરણ</button>
+      </div>
+    </div>
+
+    <div class="pp-overlay" id="pp-overlay" onclick="closeIfOutside(event)">
+      <div class="pp-modal" id="pp-modal" lang="gu">
+        <button class="pp-close" onclick="closeModal()" aria-label="બંધ કરો"><i class="ti ti-x" aria-hidden="true"></i></button>
+        <div id="pp-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sticky-offer-strip"><span class="sticky-offer-track"><span>Control sugar spikes with Herbal Diab Care</span><span class="buy-one-get-one">🎉🎉 BUY 1 GET 1 🎉🎉</span><span>Control sugar spikes with Herbal Diab Care</span></span></span>
+    <div class="sticky-main-row">
+      <img class="sticky-product-image" src="images/bottom-pro.avif" alt="Herbal Diab Care product">
+      <span class="sticky-product-info"><strong>HERBAL Diab CARE</strong><small>Daily wellness support</small><em class="sticky-price">Special Offer</em></span>
+      <button onclick="document.getElementById('orderForm').scrollIntoView({behavior:'smooth'})">BUY NOW</button>
+    </div>
+    <div class="sticky-trust-row"><span>★ Quality Checked</span><span>★ Herbal Formula</span><span>★ Secure Order</span></div>
+  </div>
+
+  <!-- REDIRECT OVERLAY: blur + spinner shown while data is sent, before moving to thankyou.html -->
+  <div class="redirect-overlay" id="redirectOverlay">
+    <div class="redirect-box">
+      <div class="redirect-ring"></div>
+      <p>તમારા ઓર્ડરની પ્રક્રિયા ચાલુ છે...</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ===== CONFIG: paste your Google Apps Script Web App URL here =====
+  const GOOGLE_SHEET_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+
+  // ---------- FAQ accordion (single open, smooth) ----------
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const wrap = item.querySelector('.faq-a-wrap');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(other=>{
+        other.classList.remove('open');
+        other.querySelector('.faq-a-wrap').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        wrap.style.maxHeight = wrap.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // ---------- Testimonials carousel ----------
+  const testimonialTrack = document.querySelector('.testi-track');
+  const testimonialDots = document.querySelectorAll('.testi-dot');
+  const testimonialSlides = document.querySelectorAll('.testi-card');
+  let testimonialIndex = 0;
+  function showTestimonial(index){
+    testimonialIndex = (index + testimonialDots.length) % testimonialDots.length;
+    testimonialTrack.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+    testimonialDots.forEach((dot, dotIndex)=>dot.classList.toggle('active', dotIndex === testimonialIndex));
+    testimonialSlides.forEach((slide, slideIndex)=>{
+      const video = slide.querySelector('video');
+      if(slideIndex === testimonialIndex){ video.play().catch(()=>{}); }
+      else { video.pause(); }
+    });
+  }
+  document.querySelector('.testi-arrow.prev').addEventListener('click', ()=>showTestimonial(testimonialIndex - 1));
+  document.querySelector('.testi-arrow.next').addEventListener('click', ()=>showTestimonial(testimonialIndex + 1));
+  testimonialDots.forEach((dot, dotIndex)=>dot.addEventListener('click', ()=>showTestimonial(dotIndex)));
+  document.querySelectorAll('.testi-sound').forEach(button=>{
+    button.innerHTML = '<i class="ti ti-volume-off" aria-hidden="true"></i>';
+    button.addEventListener('click', ()=>{
+      const video = button.closest('.testi-img').querySelector('video');
+      video.muted = !video.muted;
+      button.innerHTML = video.muted ? '<i class="ti ti-volume-off" aria-hidden="true"></i>' : '<i class="ti ti-volume" aria-hidden="true"></i>';
+      button.setAttribute('aria-label', video.muted ? 'અનુભવના વિડિયોનો અવાજ ચાલુ કરો' : 'અનુભવના વિડિયોનો અવાજ બંધ કરો');
+    });
+  });
+  showTestimonial(0);
+
+  // ---------- Keep expert and customer video playback exclusive ----------
+  const doctorPatientVideos = document.querySelectorAll('#doctorPatient video');
+  doctorPatientVideos.forEach(video=>{
+    video.addEventListener('play', ()=>{
+      doctorPatientVideos.forEach(otherVideo=>{
+        if(otherVideo !== video) otherVideo.pause();
+      });
+    });
+  });
+
+  // ---------- YouTube mute controls ----------
+  document.querySelectorAll('.yt-mute').forEach(button=>{
+    let youtubeIsMuted = false;
+    button.addEventListener('click', ()=>{
+      youtubeIsMuted = !youtubeIsMuted;
+      const youtubeEmbed = button.closest('.yt-frame').querySelector('iframe');
+      youtubeEmbed.contentWindow.postMessage(JSON.stringify({ event:'command', func:youtubeIsMuted ? 'mute' : 'unMute', args:[] }), '*');
+      button.innerHTML = youtubeIsMuted ? '<i class="ti ti-volume-off" aria-hidden="true"></i>' : '<i class="ti ti-volume" aria-hidden="true"></i>';
+      button.setAttribute('aria-label', youtubeIsMuted ? 'Unmute YouTube video' : 'Mute YouTube video');
+    });
+  });
+  document.querySelectorAll('.yt-thumb').forEach(thumbnail=>{
+    thumbnail.addEventListener('click', ()=>{
+      const frame = thumbnail.closest('.yt-frame');
+      const youtubeEmbed = frame.querySelector('iframe');
+      thumbnail.classList.add('hidden');
+      youtubeEmbed.src = youtubeEmbed.src.replace('?rel=0', '?autoplay=1&enablejsapi=1&rel=0');
+    });
+  });
+
+  // ---------- Sticky elements hide during order form ----------
+  const topBanner = document.getElementById('topBanner');
+  const stickyCta = document.getElementById('stickyCta');
+  const orderSection = document.getElementById('orderForm');
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        if(topBanner) topBanner.classList.add('hide-sticky');
+        stickyCta.classList.add('hide-sticky');
+      } else {
+        if(topBanner) topBanner.classList.remove('hide-sticky');
+        stickyCta.classList.remove('hide-sticky');
+      }
+    });
+  }, { threshold: 0.25 });
+  io.observe(orderSection);
+
+  // ---------- Order form validation + Google Sheet submit + redirect to Thank You page ----------
+  const nameInput = document.getElementById('custName');
+  const mobileInput = document.getElementById('custMobile');
+  const nameErr = document.getElementById('nameErr');
+  const mobileErr = document.getElementById('mobileErr');
+  const form = document.getElementById('orderFormEl');
+  const submitBtn = document.getElementById('submitBtn');
+  const page = document.getElementById('page');
+  const redirectOverlay = document.getElementById('redirectOverlay');
+
+  nameInput.addEventListener('input', ()=>{
+    nameInput.value = nameInput.value.replace(/[^A-Za-z\u0900-\u097F\u0A80-\u0AFF\s]/g, '');
+  });
+
+  mobileInput.addEventListener('input', ()=>{
+    // keep only digits, drop any leading country-code style extra digits so the
+    // 10-digit Indian mobile check always runs on the last 10 digits typed
+    let digitsOnly = mobileInput.value.replace(/[૦-૯]/g, digit => String(digit.charCodeAt(0) - 0x0AE6)).replace(/[^0-9]/g, '');
+    if(digitsOnly.length > 10){
+      digitsOnly = digitsOnly.slice(-10);
+    }
+    mobileInput.value = digitsOnly;
+  });
+
+  function validateForm(){
+    let valid = true;
+    nameErr.textContent = ''; mobileErr.textContent = '';
+    const nameVal = nameInput.value.trim();
+    const mobileVal = mobileInput.value.trim();
+
+    if(nameVal.length < 3){
+      nameErr.textContent = 'કૃપા કરીને સાચું નામ લખો';
+      nameInput.focus();
+      valid = false;
+    }
+    if(!/^[6-9][0-9]{9}$/.test(mobileVal)){
+      mobileErr.textContent = 'કૃપા કરીને ૬ થી ૯થી શરૂ થતો સાચો ૧૦ અંકનો મોબાઇલ નંબર લખો';
+      if(valid) mobileInput.focus();
+      valid = false;
+    }
+    return valid;
+  }
+
+  let isSubmitting = false;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(isSubmitting) return;
+    if(!validateForm()) return;
+
+    isSubmitting = true;
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+
+    const payload = {
+      name: nameInput.value.trim(),
+      mobile: mobileInput.value.trim(),
+      timestamp: new Date().toISOString()
+    };
+
+    // 1) send data to Google Sheet
+    const sendToSheet = fetch(GOOGLE_SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(()=>{ /* network issue: still continue to thank-you so user isn't stuck */ });
+
+    // 2) as soon as we know the sheet call has been fired, show the blur + spinner overlay
+    Promise.race([ sendToSheet, new Promise(res=>setTimeout(res, 50)) ]).then(()=>{
+      page.classList.add('blurred');
+      redirectOverlay.classList.add('show');
+      stickyCta.classList.add('hide-sticky');
+      if(topBanner) topBanner.classList.add('hide-sticky');
+    });
+
+    // 3) wait for the sheet call to finish (or fail) + a minimum spinner time, then go to Thank You page
+    Promise.all([ sendToSheet, new Promise(res=>setTimeout(res, 1600)) ]).then(()=>{
+      window.location.href = 'Thankyou.html';
+    });
+  });
+
+
+
+
+  
+   var contents = {
+      privacy: `<div class="pp-mtitle"><i class="ti ti-shield-lock" aria-hidden="true"></i>ગોપનીયતા નીતિ</div><div class="pp-mbadge">છેલ્લે સુધારેલ: જૂન ૨૦૨૫</div><p class="pp-mpara">DiabCare તમારી વ્યક્તિગત માહિતીની સુરક્ષાને સર્વોચ્ચ પ્રાથમિકતા આપે છે. જ્યારે તમે ઓર્ડર કરો છો, ત્યારે અમે નીચેની માહિતી એકત્ર કરીએ છીએ:</p><ul class="pp-mlist"><li>નામ, મોબાઇલ નંબર અને ડિલિવરીનું સરનામું</li><li>ચુકવણીની વિગતો (એન્ક્રિપ્ટ કરેલી અને સુરક્ષિત)</li><li>અગાઉના ઓર્ડર અને ખરીદીના રેકોર્ડ</li></ul><div class="pp-mhl">તમારી માહિતી કોઈ તૃતીય પક્ષને વેચવામાં આવતી નથી. તેનો ઉપયોગ માત્ર ઓર્ડરની પ્રક્રિયા અને ડિલિવરી માટે કરવામાં આવે છે.</div><p class="pp-mpara">અમે ઉદ્યોગમાં પ્રચલિત SSL એન્ક્રિપ્શનનો ઉપયોગ કરીએ છીએ. ગોપનીયતા અંગે કોઈ પ્રશ્ન હોય તો અમારો સંપર્ક કરો.</p>`,
+      terms: `<div class="pp-mtitle"><i class="ti ti-file-description" aria-hidden="true"></i>નિયમો અને શરતો</div><div class="pp-mbadge">કૃપા કરીને ધ્યાનથી વાંચો</div><p class="pp-mpara">DiabCareનો ઉપયોગ કરીને તમે આ શરતો સાથે સંમત થાઓ છો:</p><ul class="pp-mlist"><li>પ્રોડક્ટનાં પરિણામો વ્યક્તિએ વ્યક્તિએ અલગ હોઈ શકે છે</li><li>આ પ્રોડક્ટ કોઈ રોગની સારવાર નથી; તે સ્વાસ્થ્ય માટેનો પૂરક આહાર છે</li><li>૧૮ વર્ષથી ઓછી ઉંમરના લોકોએ વાલીની સંમતિ વિના ઓર્ડર કરવો નહીં</li><li>ખોટા અથવા છેતરપિંડીવાળા ઓર્ડર માટે કાનૂની કાર્યવાહી થઈ શકે છે</li><li>પ્રોડક્ટનાં ચિત્રો માત્ર રજૂઆત માટે છે</li></ul><div class="pp-mhl">DiabCare અગાઉથી જાણ કર્યા વિના કોઈપણ સમયે કિંમતો, ઓફરો અથવા શરતો બદલવાનો અધિકાર રાખે છે.</div>`,
+      shipping: `<div class="pp-mtitle"><i class="ti ti-truck-delivery" aria-hidden="true"></i>ડિલિવરી નીતિ</div><div class="pp-mbadge">સમગ્ર ભારતમાં મફત ડિલિવરી</div><p class="pp-mpara">અમે સમગ્ર ભારતમાં મફત ડિલિવરી આપીએ છીએ. ડિલિવરીનો સમય:</p><ul class="pp-mlist"><li>મહાનગરો (દિલ્હી, મુંબઈ, બેંગલુરુ): ૩–૫ કામકાજના દિવસો</li><li>મધ્યમ અને નાનાં શહેરો: ૫–૭ કામકાજના દિવસો</li><li>દૂરના અથવા ગ્રામીણ વિસ્તારો: ૭–૧૦ કામકાજના દિવસો</li></ul><div class="pp-mhl">ઓર્ડરની પુષ્ટિ થયા પછી ૨૪–૪૮ કલાકમાં ટ્રેકિંગ નંબર SMS અથવા WhatsApp દ્વારા મોકલવામાં આવશે.</div><ul class="pp-mlist"><li>ડિલિવરીના ૩ પ્રયાસ કરવામાં આવશે; ત્યારબાદ ઓર્ડર પરત આવશે</li><li>ખોટા સરનામાની જવાબદારી ગ્રાહકની રહેશે</li></ul>`,
+      cancel: `<div class="pp-mtitle"><i class="ti ti-refresh" aria-hidden="true"></i>ઓર્ડર રદ કરવાની નીતિ</div><div class="pp-mbadge">૭ દિવસમાં સરળ પરત પ્રક્રિયા</div><p class="pp-mpara">ઓર્ડરની પુષ્ટિ થયા પછી <strong>૨૪ કલાકની અંદર</strong> તમે ઓર્ડર રદ કરવાની વિનંતી કરી શકો છો.</p><ul class="pp-mlist"><li>ઓર્ડર મોકલાયા પછી તેને રદ કરી શકાશે નહીં</li><li>નુકસાન પામેલી અથવા ખોટી પ્રોડક્ટ મળે તો ૭ દિવસમાં ફરિયાદ કરો</li><li>ખોલેલી અથવા વપરાયેલી પ્રોડક્ટ પરત લેવામાં આવશે નહીં</li><li>રિફંડ ૫–૭ કામકાજના દિવસોમાં મૂળ ચુકવણી માધ્યમ દ્વારા મળશે</li></ul><div class="pp-mhl">પરત કરવા માટે પ્રોડક્ટ મૂળ પેકિંગમાં હોવી જરૂરી છે. પેકેટ ખોલવાનો વિડિયો હોય તો દાવાની પ્રક્રિયા ઝડપથી થાય છે.</div>`,
+      disclaimer: `<div class="pp-mtitle"><i class="ti ti-alert-circle" aria-hidden="true"></i>કાનૂની અસ્વીકરણ</div><div class="pp-mbadge">મહત્વપૂર્ણ સૂચના</div><p class="pp-mpara">DiabCare કુદરતી સ્વાસ્થ્ય પૂરક છે. આ પ્રોડક્ટ વિશે નીચેની બાબતો ધ્યાનમાં રાખો:</p><ul class="pp-mlist"><li>આ પ્રોડક્ટ કોઈપણ રોગનું નિદાન, સારવાર, સંપૂર્ણ ઉપચાર કે નિવારણ કરતી નથી</li><li>પરિણામો વ્યક્તિએ વ્યક્તિએ અલગ હોઈ શકે છે</li><li>આ પ્રોડક્ટ FSSAIની માર્ગદર્શિકા મુજબ પૂરક આહાર છે, દવા નથી</li><li>કોઈપણ તબીબી સ્થિતિ હોય તો ઉપયોગ પહેલાં ડૉક્ટરની સલાહ લો</li><li>ગર્ભવતી કે સ્તનપાન કરાવતી મહિલાઓ અને લાંબા ગાળાની બીમારી ધરાવતા લોકોએ પહેલાં ડૉક્ટરની સલાહ લેવી જોઈએ</li></ul><div class="pp-mhl">વેબસાઇટ પરનાં નિવેદનોનું ફૂડ એન્ડ ડ્રગ એડમિનિસ્ટ્રેશન દ્વારા મૂલ્યાંકન કરવામાં આવ્યું નથી. આ પ્રોડક્ટ કોઈ રોગના નિદાન, સારવાર, સંપૂર્ણ ઉપચાર કે નિવારણ માટે નથી.</div><p class="pp-mpara">પ્રોડક્ટનાં ચિત્રો, વર્ણનો અને ગ્રાહકોના અનુભવો માત્ર સમજ માટે છે. DiabCare કોઈપણ પરોક્ષ અથવા પરિણામસ્વરૂપ નુકસાન માટે જવાબદાર નથી.</p>`
+    };
+
+
+    function openModal(key) {
+      document.getElementById('pp-content').innerHTML = contents[key];
+      document.getElementById('pp-overlay').classList.add('show');
+    }
+    function closeModal() {
+      document.getElementById('pp-overlay').classList.remove('show');
+    }
+    function closeIfOutside(e) {
+      if (e.target === document.getElementById('pp-overlay')) closeModal();
+    }
+</script>
+
+</body>
+</html>

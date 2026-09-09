@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>धन्यवाद | Herbal Diab Care</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --leaf-dark:#1F4B3A;
+    --leaf-mid:#3E7A5C;
+    --leaf-soft:#8FBBA1;
+    --turmeric:#fab452;
+    --turmeric-deep:#A9691B;
+    --cream:#FBF6EA;
+    --cream-2:#F3ECDB;
+    --ink:#2A2620;
+    --brick:#B4562F;
+    --line:#E4DBC4;
+    --radius-blob-1: 62% 38% 55% 45% / 48% 45% 55% 52%;
+    --radius-blob-2: 45% 55% 60% 40% / 55% 48% 52% 45%;
+    --font-display:'Halant', 'Noto Sans Devanagari', serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--font-display);
+    background:#DDD6C4;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  .page{
+    max-width:450px;
+    margin:0 auto;
+    background:var(--cream);
+    position:relative;
+    min-height:100vh;
+    box-shadow:0 0 40px rgba(0,0,0,.18);
+    overflow:hidden;
+  }
+
+  /* ===== HERO / CONFIRMATION BLOCK ===== */
+  .ty-hero{
+    position:relative;
+    background:
+      radial-gradient(circle at 85% -10%, rgba(198,134,46,.28), transparent 55%),
+      linear-gradient(180deg, var(--leaf-dark) 0%, #2d674b 100%);
+    color:var(--cream);
+    padding:44px 26px 40px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .ty-hero::before{
+    content:"";
+    position:absolute;
+    top:-60px; right:-60px;
+    width:180px; height:180px;
+    background:rgba(250,180,82,.15);
+    border-radius:50%;
+  }
+  .ty-hero::after{
+    content:"";
+    position:absolute;
+    bottom:-50px; left:-50px;
+    width:150px; height:150px;
+    background:rgba(143,187,161,.15);
+    border-radius:50%;
+  }
+
+  .check-frame{
+    width:110px; height:110px;
+    margin:0 auto 22px;
+    border-radius:50%;
+    background:var(--turmeric);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 16px 30px -8px rgba(0,0,0,.35), 0 0 0 7px rgba(255,255,255,.14);
+    position:relative;
+    z-index:2;
+    animation:pop-in .55s cubic-bezier(.34,1.56,.64,1) both;
+  }
+  @keyframes pop-in{
+    0%{ transform:scale(.4); opacity:0; }
+    100%{ transform:scale(1); opacity:1; }
+  }
+  .check-frame svg{ width:52px; height:52px; }
+  .check-path{
+    stroke:var(--leaf-dark);
+    stroke-width:4.5;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    fill:none;
+    stroke-dasharray:48;
+    stroke-dashoffset:48;
+    animation:draw-check .5s .45s ease forwards;
+  }
+  @keyframes draw-check{ to{ stroke-dashoffset:0; } }
+
+  .ty-eyebrow{
+    position:relative; z-index:2;
+    font-size:13px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#E7C77B;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    margin-bottom:12px;
+  }
+  .ty-eyebrow::before, .ty-eyebrow::after{
+    content:"";
+    width:20px; height:1.5px;
+    background:#E7C77B;
+    opacity:.7;
+  }
+
+  .ty-hero h1{
+    position:relative; z-index:2;
+    font-size:27px;
+    font-weight:700;
+    line-height:1.35;
+    margin-bottom:10px;
+  }
+  .ty-hero h1 span{ color:var(--turmeric); }
+
+  .ty-hero p.lead{
+    position:relative; z-index:2;
+    font-size:16px;
+    line-height:1.6;
+    color:#EAE3D2;
+    max-width:320px;
+    margin:0 auto;
+  }
+
+  /* ===== PRODUCT CARD ===== */
+  .product-showcase{
+    margin:-38px 22px 0;
+    position:relative;
+    z-index:3;
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 18px 34px -14px rgba(31,75,58,.4);
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px;
+    border:1px solid var(--line);
+  }
+  .product-showcase .frame{
+    width:128px; height:128px;
+    flex:0 0 auto;
+    border-radius:var(--radius-blob-2);
+    background:linear-gradient(150deg, var(--leaf-soft), var(--cream-2) 55%, var(--turmeric) 140%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    padding:6px;
+  }
+  .product-showcase .frame img{
+    width:100%; height:100%;
+    object-fit:cover;
+    border-radius: 50%;
+    filter:drop-shadow(0 6px 8px rgba(42,38,32,.25));
+  }
+  .product-showcase .info{ flex:1; min-width:0; text-align:left; }
+  .product-showcase .info strong{
+    display:block;
+    color:var(--leaf-dark);
+    font-size:16px;
+    font-weight:700;
+    line-height:1.2;
+  }
+  .product-showcase .info small{
+    display:block;
+    margin-top:3px;
+    color:var(--leaf-mid);
+    font-size:12.5px;
+  }
+  .product-showcase .badge{
+    display:inline-block;
+    margin-top:6px;
+    padding:3px 9px;
+    background:rgba(143,187,161,.25);
+    color:var(--leaf-dark);
+    font-size:11px;
+    font-weight:700;
+    border-radius:999px;
+  }
+
+  /* ===== ORDER SUMMARY ===== */
+  section.summary-section{ padding:26px 22px 6px; }
+  .section-eyebrow{
+    font-size:13px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--turmeric-deep);
+    font-weight:600;
+    margin-bottom:12px;
+  }
+  .order-summary{
+    background:var(--cream-2);
+    border:1px dashed var(--leaf-soft);
+    border-radius:14px;
+    padding:6px 16px;
+  }
+  .order-summary .row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:11px 0;
+    border-bottom:1px solid var(--line);
+    font-size:15px;
+  }
+  .order-summary .row:last-child{ border-bottom:0; }
+  .order-summary .row span:first-child{ color:#746b5d; }
+  .order-summary .row span:last-child{ color:var(--leaf-dark); font-weight:700; }
+  .status-pill{
+    padding:3px 10px;
+    background:var(--leaf-dark);
+    color:var(--cream) !important;
+    border-radius:99px;
+    font-size:12px !important;
+    font-weight:700 !important;
+  }
+
+  /* ===== NEXT STEPS ===== */
+  section.steps-section{ padding:28px 22px 6px; }
+  .next-steps{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .next-steps .step{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 15px;
+    box-shadow:0 4px 10px rgba(42,38,32,.05);
+  }
+  .next-steps .step .num{
+    flex:0 0 auto;
+    width:30px; height:30px;
+    border-radius:50%;
+    background:var(--leaf-dark);
+    color:var(--turmeric);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:700;
+  }
+  .next-steps .step p{
+    font-size:14.5px;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .next-steps .step p b{ color:var(--leaf-mid); }
+
+  /* ===== SUPPORT STRIP ===== */
+  .support-strip{
+    margin:28px 22px 0;
+    text-align:center;
+    background:var(--leaf-dark);
+    color:var(--cream);
+    padding:18px 18px;
+    border-radius:16px;
+  }
+  .support-strip p{
+    font-size:14.5px;
+    line-height:1.55;
+    color:var(--cream-2);
+  }
+  .support-strip strong{ color:var(--turmeric); }
+
+  /* ===== DISCLAIMER ===== */
+  .footer-disclaimer{
+    padding:22px 26px 40px;
+    font-size:10px;
+    line-height:1.65;
+    color:#a39d8c;
+    text-align:center;
+  }
+  .footer-disclaimer strong{ color:#8c8674; }
+
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HERO / CONFIRMATION -->
+  <div class="ty-hero">
+    <div class="check-frame">
+      <svg viewBox="0 0 24 24">
+        <path class="check-path" d="M5 13l4 4 10-10"/>
+      </svg>
+    </div>
+    <p class="ty-eyebrow">Order Confirmed</p>
+    <h1>धन्यवाद, <span id="custNameDisplay">आपका Order</span> प्राप्त हो गया!</h1>
+    <p class="lead">हमारी टीम जल्द ही आपसे संपर्क करके Order confirm करेगी।</p>
+  </div>
+
+  <!-- PRODUCT SHOWCASE -->
+  <div class="product-showcase">
+    <div class="frame">
+      <img src="images/product.avif" alt="Herbal Diab Care" onerror="this.src='images/product.avif'">
+    </div>
+    <div class="info">
+      <strong>HERBAL Diab CARE</strong>
+      <small>Ayurvedic Blood Sugar Wellness Formula</small>
+      <span class="badge">Quality Checked</span>
+    </div>
+  </div>
+
+  <!-- ORDER SUMMARY -->
+  <section class="summary-section">
+    <p class="section-eyebrow">Order Summary</p>
+    <div class="order-summary">
+      <div class="row"><span>Status</span><span class="status-pill">Confirmed</span></div>
+    </div>
+  </section>
+
+  <!-- NEXT STEPS -->
+  <section class="steps-section">
+    <p class="section-eyebrow">आगे क्या होगा?</p>
+    <div class="next-steps">
+      <div class="step">
+        <span class="num">1</span>
+        <p>हमारी टीम <b>24 घंटों के अंदर</b> confirmation के लिए call करेगी।</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <p>Order dispatch होने पर <b>tracking details</b> SMS/WhatsApp पर भेजी जाएगी।</p>
+      </div>
+     
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <div class="support-strip">
+    <p>किसी भी सवाल के लिए हमारी <strong>Support Team</strong> से संपर्क करें — हम आपकी सहायता के लिए यहाँ हैं।</p>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <p class="footer-disclaimer"><strong>Disclaimer:</strong> Herbal Diab Care एक Ayurvedic Herbal Wellness Product है। यह Diabetes का इलाज, cure या prescribed medical treatment का replacement नहीं है। किसी भी supplement को शुरू करने से पहले qualified healthcare professional से सलाह लें।</p>
+
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get('name');
+  const mobile = params.get('mobile');
+
+  if(name){
+    document.getElementById('custNameDisplay').textContent = name + ' जी, आपका Order';
+    document.getElementById('summaryName').textContent = name;
+  }
+  if(mobile){
+    document.getElementById('summaryMobile').textContent = mobile;
+  }
+</script>
+
+</body>
+</html>
