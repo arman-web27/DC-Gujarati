@@ -624,9 +624,10 @@
     box-shadow:0 14px 30px -10px rgba(0,0,0,.4);
     opacity:1;
     will-change:transform, opacity;
-    transition:transform .55s cubic-bezier(.22,1,.36,1), opacity .4s ease;
+    visibility:visible;
+    transition:transform .55s cubic-bezier(.22,1,.36,1), opacity .4s ease, visibility 0s;
   }
-  .sticky-cta.hide-sticky{ visibility:hidden; transform:translate3d(-50%,calc(100% + 30px),0); opacity:0; pointer-events:none; }
+  .sticky-cta.hide-sticky{ transition-delay:0s,0s,.55s; visibility:hidden; transform:translate3d(-50%,calc(100% + 30px),0); opacity:0; pointer-events:none; }
   .sticky-offer-strip{ display:block; height:28px; padding:0 8px; overflow:hidden; background:var(--leaf-mid); color:var(--cream); text-align:center; font-size:15px; font-weight:700; line-height:28px; }
   .sticky-offer-track{ display:flex; width:100%; flex-direction:column; animation:sticky-offer-scroll 5s ease-in-out infinite; }
   .sticky-offer-track span{ display:block; height:28px; white-space:nowrap; }
@@ -1717,41 +1718,10 @@
     function closeIfOutside(e) {
       if (e.target === document.getElementById('pp-overlay')) closeModal();
     }
-  // Smooth section navigation; manual scrolling keeps the browser's native behavior.
-  let sectionScrollFrame = null;
-  let previousScrollBehavior = '';
-  function stopSectionScroll(){
-    if(sectionScrollFrame === null) return;
-    cancelAnimationFrame(sectionScrollFrame);
-    sectionScrollFrame = null;
-    document.documentElement.style.scrollBehavior = previousScrollBehavior;
-  }
+  // Use browser-native smooth scrolling for section navigation.
   function scrollToPageSection(target){
-    stopSectionScroll();
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-      target.scrollIntoView({ behavior:'instant', block:'start' });
-      return;
-    }
-    const start = window.scrollY;
-    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-    const destination = Math.min(maxScroll, Math.max(0, start + target.getBoundingClientRect().top - 16));
-    const distance = destination - start;
-    if(Math.abs(distance) < 1) return;
-    const duration = Math.min(1000, Math.max(450, Math.abs(distance) * 0.22));
-    const started = performance.now();
-    previousScrollBehavior = document.documentElement.style.scrollBehavior;
-    document.documentElement.style.scrollBehavior = 'auto';
-    function step(now){
-      const progress = Math.min(1, (now - started) / duration);
-      const eased = progress < 0.5 ? 4 * progress * progress * progress : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-      window.scrollTo(0, start + distance * eased);
-      if(progress < 1) sectionScrollFrame = requestAnimationFrame(step);
-      else {
-        sectionScrollFrame = null;
-        document.documentElement.style.scrollBehavior = previousScrollBehavior;
-      }
-    }
-    sectionScrollFrame = requestAnimationFrame(step);
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior:reducedMotion ? 'instant' : 'smooth', block:'start' });
   }
   document.addEventListener('click', event=>{
     if(event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -1762,12 +1732,6 @@
     if(!target) return;
     event.preventDefault();
     scrollToPageSection(target);
-  });
-  window.addEventListener('wheel', stopSectionScroll, { passive:true });
-  window.addEventListener('touchstart', stopSectionScroll, { passive:true });
-  window.addEventListener('pointerdown', stopSectionScroll, { passive:true });
-  window.addEventListener('keydown', event=>{
-    if(['ArrowUp','ArrowDown','PageUp','PageDown','Home','End',' '].includes(event.key)) stopSectionScroll();
   });
 </script>
 
