@@ -626,7 +626,7 @@
     will-change:transform, opacity;
     transition:transform .55s cubic-bezier(.22,1,.36,1), opacity .4s ease;
   }
-  .sticky-cta.hide-sticky{ transform:translate3d(-50%,calc(100% + 30px),0); opacity:0; pointer-events:none; }
+  .sticky-cta.hide-sticky{ visibility:hidden; transform:translate3d(-50%,calc(100% + 30px),0); opacity:0; pointer-events:none; }
   .sticky-offer-strip{ display:block; height:28px; padding:0 8px; overflow:hidden; background:var(--leaf-mid); color:var(--cream); text-align:center; font-size:15px; font-weight:700; line-height:28px; }
   .sticky-offer-track{ display:flex; width:100%; flex-direction:column; animation:sticky-offer-scroll 5s ease-in-out infinite; }
   .sticky-offer-track span{ display:block; height:28px; white-space:nowrap; }
@@ -1586,10 +1586,11 @@
   const secondSection = document.getElementById('pain') || document.querySelector('.hero-banner + section');
   function updateStickyVisibility(){
     const overlay = document.getElementById('redirectOverlay');
-    const secondSectionStarted = secondSection && secondSection.getBoundingClientRect().top < window.innerHeight;
+    const secondSectionStarted = secondSection && secondSection.getBoundingClientRect().top <= 0;
     const orderBounds = orderSection && orderSection.getBoundingClientRect();
     const orderVisible = orderBounds && orderBounds.bottom > 0 && orderBounds.top < window.innerHeight;
-    const shouldHide = !secondSectionStarted || Boolean(orderVisible) || Boolean(overlay && overlay.classList.contains('show'));
+    const policyOverlay = document.getElementById('pp-overlay');
+    const shouldHide = !secondSectionStarted || Boolean(orderVisible) || Boolean(overlay && overlay.classList.contains('show')) || Boolean(policyOverlay && policyOverlay.classList.contains('show'));
     [topBanner, stickyCta].filter(Boolean).forEach(bar=>{
       bar.classList.toggle('hide-sticky', shouldHide);
       bar.inert = shouldHide;
@@ -1682,8 +1683,7 @@
     Promise.race([ sendToSheet, new Promise(res=>setTimeout(res, 50)) ]).then(()=>{
       page.classList.add('blurred');
       redirectOverlay.classList.add('show');
-      stickyCta.classList.add('hide-sticky');
-      if(topBanner) topBanner.classList.add('hide-sticky');
+      updateStickyVisibility();
     });
 
     // 3) wait for the sheet call to finish (or fail) + a minimum spinner time, then go to Thank You page
@@ -1708,9 +1708,11 @@
     function openModal(key) {
       document.getElementById('pp-content').innerHTML = contents[key];
       document.getElementById('pp-overlay').classList.add('show');
+      updateStickyVisibility();
     }
     function closeModal() {
       document.getElementById('pp-overlay').classList.remove('show');
+      updateStickyVisibility();
     }
     function closeIfOutside(e) {
       if (e.target === document.getElementById('pp-overlay')) closeModal();
