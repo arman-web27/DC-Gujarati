@@ -286,7 +286,7 @@
   .yt-thumb::after{ content:"▶"; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:58px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:12px; background:#e62117; color:#fff; font-size:24px; padding-left:4px; }
   .yt-thumb.hidden{ display:none; }
   .yt-mute{ position:absolute; right:10px; bottom:10px; width:38px; height:38px; border-radius:50%; background:rgba(31,75,58,.92); color:var(--cream); font-size:17px; z-index:2; box-shadow:0 4px 10px rgba(0,0,0,.25); }
-  .yt-mute i, .testi-sound i{ pointer-events:none; }
+  .yt-mute i{ pointer-events:none; }
   .yt-caption{ display:flex; align-items:center; gap:10px; margin-top:12px; color:var(--leaf-dark); font-size:18px; font-weight:600; line-height:1.25; }
   .yt-caption-icon{ flex:0 0 auto; width:30px; height:30px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:var(--turmeric); color:var(--leaf-dark); font-size:19px; }
   .yt-note{ margin-top:5px; color:#746b5d; font-size:14px; line-height:1.35; }
@@ -369,45 +369,6 @@
   }
   .compare-final strong{ font-size:20px; color:var(--turmeric); display:block; margin-bottom:6px; }
   .compare-final p{ font-size:17px; color:#efeada; }
-
-  /* ============ TESTIMONIALS ============ */
-  .testi{ background:linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%); padding:38px 22px 46px; border-bottom:2px solid var(--turmeric);}
-  .testi .eyebrow{ color:var(--turmeric-deep); }
-  .testi .eyebrow::before, .testi .eyebrow::after{ background:var(--turmeric-deep); }
-  .testi .sub-heading{ color:var(--leaf-dark); }
-  .testi-slider{ position:relative; margin:20px 25px 0; }
-  .testi-viewport{ overflow:hidden; border-radius:21px; }
-  .testi-track{ display:flex; transition:transform .45s ease; }
-  .testi-card{
-    display:flex;
-    gap:0;
-    flex:0 0 100%;
-    min-width:0;
-    min-height:300px;
-    background:#fff;
-    border:2px solid var(--turmeric);
-    border-radius:21px;
-    overflow:hidden;
-    align-items:stretch;
-    box-shadow:0 16px 28px rgba(31,75,58,.15);
-  }
-  .testi-img{ flex:0 0 43%; width:43%; background:var(--leaf-dark); position:relative; }
-  .testi-img .frame{ width:100%; height:100%; min-height:150px; border-radius:0; }
-  .testi-img video{ width:100%; height:100%; object-fit:cover; display:block; }
-  .testi-sound{ position:absolute; right:9px; bottom:9px; width:36px; height:36px; border-radius:50%; background:rgba(31,75,58,.88); color:var(--cream); font-size:17px; z-index:1; }
-  .testi-body{ flex:1; padding:20px 14px 16px 16px; min-width:0; }
-  .testi-quote{ color:var(--turmeric); font-family:Georgia, serif; font-size:31px; line-height:.7; font-weight:700; }
-  .testi-body h4{ font-size:17px; color:var(--leaf-dark); font-weight:700; margin-top:9px; }
-  .testi-body span{ font-size:14px; color:var(--turmeric-deep); display:block; margin:5px 0 9px; }
-  .testi-body span::before{ content:"●"; font-size:10px; margin-right:5px; }
-  .testi-body p{ font-size:16px; line-height:1.45; color:var(--ink); }
-  .stars{ color:var(--turmeric); font-size:15px; margin-bottom:5px; letter-spacing:1px; }
-  .testi-arrow{ position:absolute; top:50%; width:40px; height:40px; transform:translateY(-50%); border-radius:50%; background:var(--leaf-mid); color:#fff; font-family:Arial, sans-serif; font-size:30px; line-height:34px; z-index:2; box-shadow:0 5px 12px rgba(31,75,58,.2); }
-  .testi-arrow.prev{ left:-45px; }
-  .testi-arrow.next{ right:-45px; }
-  .testi-dots{ display:flex; justify-content:center; gap:8px; margin-top:14px; }
-  .testi-dot{ width:8px; height:8px; border-radius:50%; background:rgba(62,122,92,.25); padding:0; }
-  .testi-dot.active{ width:22px; border-radius:8px; background:var(--leaf-mid); }
 
   /* ============ OFFER / CTA ============ */
   .offer{
@@ -725,19 +686,6 @@
     .compare-final strong{ font-size:17px; }
     .compare-final p{ font-size:14.5px; }
 
-    /* testimonials */
-    .testi{ padding:32px 18px 38px; }
-    .testi-slider{ margin:16px 8px 0; }
-    .testi-card{ min-height:250px; }
-    .testi-quote{ font-size:26px; }
-    .testi-body{ padding:14px 10px 12px 12px; }
-    .testi-body h4{ font-size:15px; }
-    .testi-body span{ font-size:12.5px; }
-    .testi-body p{ font-size:13.5px; }
-    .testi-arrow{ width:32px; height:32px; font-size:24px; line-height:28px; }
-    .testi-arrow.prev{ left:-6px; }
-    .testi-arrow.next{ right:-6px; }
-
     /* offer */
     .offer-layout{ min-height:250px; }
     .offer-frame{ max-width:220px; }
@@ -1046,7 +994,7 @@
   }
   .eyebrow::before, .eyebrow::after{ flex-shrink:0; }
   .pain-subtitle, .brand-tag, .pain-footer .lede, .work-text h3,
-  .patient-card-heading h3, .ing-card h4, .testi-body h4,
+  .patient-card-heading h3, .ing-card h4,
   .customer-review-person h3, .doctor-review-title, .doctor-review-name,
   .yt-caption, .compare-final strong, #orderForm .order-details-title,
   .offer-cta-label strong{
@@ -1056,12 +1004,12 @@
   #orderForm .order-badge{ font-size:1rem; line-height:1.5; }
   .specimen-text, .pain-footer p, .solution-body p, .work-text p,
   .patient-intro, .ing-card p, .ing-strap, .cert-list li, .compare-final p,
-  .testi-body p, .customer-reviews-intro, .customer-review-copy blockquote,
+  .customer-reviews-intro, .customer-review-copy blockquote,
   .offer-checks span, .order-intro, .faq-q, .faq-a{
     font-size:var(--section-body-size); line-height:1.75;
   }
   .doctor-review-copy, .doctor-video-label, .yt-note, .gu-compare-note,
-  .testi-body span, .customer-review-person>span, .offer-benefits-title,
+  .customer-review-person>span, .offer-benefits-title,
   .patient-card-kicker, .tag-pill, #orderForm .field label, #orderForm .err,
   #orderForm .order-privacy, #orderForm .order-footer, .order-product-tag{
     font-size:var(--section-caption-size); line-height:1.65;
@@ -1235,32 +1183,6 @@
     </div>
   </section>
 
-  <!-- 5. DOCTOR VIDEO -->
-  <section class="video-block" id="doctorVideo">
-    <p class="eyebrow">નિષ્ણાતના શબ્દોમાં</p>
-    <h2 class="sub-heading center" style="color:var(--cream);">લોહીમાં શર્કરા અંગેની તમારી મુખ્ય ચિંતાઓના જવાબ</h2>
-    <div class="doctor-review-grid">
-      <article class="doctor-review-card">
-        <h3 class="doctor-review-title">ડૉક્ટરનો અભિપ્રાય</h3>
-        <div class="doctor-review-media">
-         <video class="doctor-review-video" src="images/Dr-Kevin4.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
-        </div>
-        <div class="doctor-review-name">ડૉ. કેવિન પટેલ</div>
-        
-      </article>
-      <article class="doctor-review-card">
-        <h3 class="doctor-review-title">નિષ્ણાતની સલાહ</h3>
-        <div class="doctor-review-media">
-          <video class="doctor-review-video" src="images/Dr-2.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
-        </div>
-       <div class="doctor-review-name">ડૉ. રુચિ ગજેરા</div>
-        
-      </article>
-    </div>
-  </section>
-
-
-
   <!-- 7. CERTIFICATE -->
   <section class="cert" id="cert">
     <p class="eyebrow">ગુણવત્તા મહત્વની છે</p>
@@ -1300,62 +1222,6 @@
       </table>
     </div>
     <p class="gu-compare-note" id="compare-example-note">અન્ય પ્રોડક્ટ્સની વિગતો સમજ માટેનાં ઉદાહરણો છે; કોઈ ચોક્કસ બ્રાન્ડ સાથેની ચકાસેલી સરખામણી નથી.</p>
-  </section>
-
-  <!-- 10. TESTIMONIALS -->
-  <section class="testi" id="testimonials" lang="gu">
-    <p class="eyebrow">ગ્રાહકોના અનુભવો</p>
-    <h2 class="sub-heading center">જેમણે પોતાની દૈનિક સ્વાસ્થ્યયાત્રા અમારી સાથે શરૂ કરી</h2>
-
-    <div class="testi-slider" aria-label="ગ્રાહકોના અનુભવો">
-      <button class="testi-arrow prev" type="button" aria-label="પાછલો અનુભવ">&#8249;</button>
-      <div class="testi-viewport">
-        <div class="testi-track">
-          <article class="testi-card"><div class="testi-img"><div class="frame"><video src="images/customer-1.mp4" autoplay muted loop playsinline preload="metadata"></video><button class="testi-sound" type="button" aria-label="અનુભવના વિડિયોનો અવાજ ચાલુ કરો">&#128263;</button></div></div><div class="testi-body"><div class="testi-quote">"</div><h4>રાહુલ મહેતા</h4><span> અમદાવાદ</span><div class="stars">★★★★★</div><p>હું દરરોજ ગ્લુકોઝ મોનિટરથી મારું શુગરનું સ્તર તપાસું છું અને મારી દૈનિક સ્વાસ્થ્યની દિનચર્યામાં હર્બલ ડાયબ કેરનો પણ સમાવેશ કર્યો છે. હવે હું મારા આહાર અને જીવનશૈલી વિશે પણ પહેલાં કરતાં વધુ જાગૃત રહું છું.</p></div></article>
-          <article class="testi-card"><div class="testi-img"><div class="frame"><video src="images/customer-2.mp4" autoplay muted loop playsinline preload="metadata"></video><button class="testi-sound" type="button" aria-label="અનુભવના વિડિયોનો અવાજ ચાલુ કરો">&#128263;</button></div></div><div class="testi-body"><div class="testi-quote">"</div><h4>અમિત વર્મા</h4><span>દિલ્હી</span><div class="stars">★★★★★</div><p>વધતી ઉંમર સાથે હું શુગર અને સમગ્ર સ્વાસ્થ્ય વિશે વધુ જાગૃત થવા લાગ્યો હતો. આ કારણે હર્બલ ડાયબ કેરને મારી દૈનિક સ્વાસ્થ્યની દિનચર્યાનો ભાગ બનાવ્યો અને મારી જીવનશૈલી પર પણ ધ્યાન આપવાનું શરૂ કર્યું.</p></div></article>
-
-          <article class="testi-card"><div class="testi-img"><div class="frame"><video src="images/customer-3.mp4" autoplay muted loop playsinline preload="metadata"></video><button class="testi-sound" type="button" aria-label="અનુભવના વિડિયોનો અવાજ ચાલુ કરો">&#128263;</button></div></div><div class="testi-body"><div class="testi-quote">"</div><h4>રાકેશ શર્મા</h4><span>જયપુર</span><div class="stars">★★★★★</div><p>થોડા સમયથી શુગરને લઈને ઘણી ચિંતા રહેતી હતી. રોજિંદી દિનચર્યામાં પણ ધ્યાન રાખવું પડતું હતું. હર્બલ ડાયબ કેરને મારી દિનચર્યામાં સામેલ કર્યું અને સાથે ખાવા-પીવા તથા જીવનશૈલી પર પણ ધ્યાન આપવાનું શરૂ કર્યું.</p></div></article>
-
-          <article class="testi-card"><div class="testi-img"><div class="frame"><video src="images/customer-4.mp4" autoplay muted loop playsinline preload="metadata"></video><button class="testi-sound" type="button" aria-label="અનુભવના વિડિયોનો અવાજ ચાલુ કરો">&#128263;</button></div></div><div class="testi-body"><div class="testi-quote">"</div><h4>જીતુભાઈ</h4><span>જયપુર</span><div class="stars">★★★★★</div><p>પહેલાં મારું શુગરનું સ્તર ઘણી વાર ઉપર-નીચે રહેતું હતું અને તેને લઈને ચિંતા પણ રહેતી હતી. હર્બલ ડાયબ કેરને મારી દૈનિક સ્વાસ્થ્યની દિનચર્યામાં સામેલ કરવાની સાથે મેં મારા આહાર અને જીવનશૈલી પર પણ ધ્યાન આપવાનું શરૂ કર્યું. લગભગ ૧૦ દિવસમાં મને મારી દિનચર્યામાં ફેરફાર અનુભવાવા લાગ્યો.</p></div></article>
-        </div>
-      </div>
-      <button class="testi-arrow next" type="button" aria-label="આગળનો અનુભવ">&#8250;</button>
-      <div class="testi-dots" role="tablist" aria-label="ગ્રાહકનો અનુભવ પસંદ કરો"><button class="testi-dot active" type="button" aria-label="ગ્રાહકનો અનુભવ ૧"></button><button class="testi-dot" type="button" aria-label="ગ્રાહકનો અનુભવ ૨"></button><button class="testi-dot" type="button" aria-label="ગ્રાહકનો અનુભવ ૩"></button><button class="testi-dot" type="button" aria-label="ગ્રાહકનો અનુભવ ૪"></button></div>
-    </div>
-  </section>
-
-  <!-- 11. OFFER -->
-  <section class="offer" id="offerSection" lang="gu">
-    <p class="eyebrow">પ્રારંભિક ખાસ ઓફર</p>
-    <h1 class="main-heading">તમારી દૈનિક સ્વાસ્થ્યની દિનચર્યાની શરૂઆત આજથી કરો</h1>
-    <div class="offer-layout">
-      <div class="offer-visual"><div class="offer-frame frame frame-blob1">
-        <img src="images/product.avif" alt="હર્બલ ડાયબ કેર" loading="lazy" onerror="this.src='images/product.avif'">
-      </div></div>
-      <div class="offer-benefits">
-        <p class="offer-benefits-title">આયુર્વેદિક સ્વાસ્થ્ય</p>
-        <p class="brand-name" style="color:var(--cream); text-align:left;">હર્બલ<br>ડાયબ કેર</p>
-        <div class="offer-checks">
-          <span>ગુણવત્તા ચકાસેલી</span>
-          <span>વનસ્પતિ આધારિત મિશ્રણ</span>
-          <span>સુરક્ષિત પેકિંગ</span>
-          <span>મફત આહારપત્રક</span>
-         
-          <span>સરળ દૈનિક દિનચર્યા</span>
-        </div>
-      </div>
-
-    </div>
-    <div>
-<div>
-  <span class="buyget"><span>🎉🎉 ૧ ખરીદો, ૧ મફત મેળવો 🎉🎉</span></span>
-</div>
-   
-    <div class="offer-cta-panel">
-      <span class="offer-cta-label"><strong>આજે જ તમારો ઓર્ડર કરો</strong></span>
-      <a href="#orderForm" class="cta-btn">હવે ઓર્ડર કરો&nbsp; →</a>
-    </div>
-     </div>
   </section>
 
   <!-- 12. ORDER FORM -->
@@ -1573,35 +1439,6 @@
       }
     });
   });
-
-  // ---------- Testimonials carousel ----------
-  const testimonialTrack = document.querySelector('.testi-track');
-  const testimonialDots = document.querySelectorAll('.testi-dot');
-  const testimonialSlides = document.querySelectorAll('.testi-card');
-  let testimonialIndex = 0;
-  function showTestimonial(index){
-    testimonialIndex = (index + testimonialDots.length) % testimonialDots.length;
-    testimonialTrack.style.transform = `translateX(-${testimonialIndex * 100}%)`;
-    testimonialDots.forEach((dot, dotIndex)=>dot.classList.toggle('active', dotIndex === testimonialIndex));
-    testimonialSlides.forEach((slide, slideIndex)=>{
-      const video = slide.querySelector('video');
-      if(slideIndex === testimonialIndex){ video.play().catch(()=>{}); }
-      else { video.pause(); }
-    });
-  }
-  document.querySelector('.testi-arrow.prev').addEventListener('click', ()=>showTestimonial(testimonialIndex - 1));
-  document.querySelector('.testi-arrow.next').addEventListener('click', ()=>showTestimonial(testimonialIndex + 1));
-  testimonialDots.forEach((dot, dotIndex)=>dot.addEventListener('click', ()=>showTestimonial(dotIndex)));
-  document.querySelectorAll('.testi-sound').forEach(button=>{
-    button.innerHTML = '<i class="ti ti-volume-off" aria-hidden="true"></i>';
-    button.addEventListener('click', ()=>{
-      const video = button.closest('.testi-img').querySelector('video');
-      video.muted = !video.muted;
-      button.innerHTML = video.muted ? '<i class="ti ti-volume-off" aria-hidden="true"></i>' : '<i class="ti ti-volume" aria-hidden="true"></i>';
-      button.setAttribute('aria-label', video.muted ? 'અનુભવના વિડિયોનો અવાજ ચાલુ કરો' : 'અનુભવના વિડિયોનો અવાજ બંધ કરો');
-    });
-  });
-  showTestimonial(0);
 
   // ---------- Keep expert and customer video playback exclusive ----------
   const doctorPatientVideos = document.querySelectorAll('#doctorPatient video');
