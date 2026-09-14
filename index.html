@@ -281,10 +281,6 @@
   .yt-card{ margin-top:18px; padding:14px; background:var(--cream); border:2px solid var(--leaf-soft); border-radius:18px 18px 28px 18px; box-shadow:0 16px 26px rgba(0,0,0,.18); }
   .yt-frame{ position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; background:#0d2019; border:3px solid var(--leaf-mid); }
   .yt-frame iframe{ width:100%; height:100%; border:0; display:block; }
-  .yt-thumb{ position:absolute; inset:0; width:100%; height:100%; padding:0; background:#0d2019; z-index:2; }
-  .yt-thumb img{ width:100%; height:100%; object-fit:cover; }
-  .yt-thumb::after{ content:"▶"; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:58px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:12px; background:#e62117; color:#fff; font-size:24px; padding-left:4px; }
-  .yt-thumb.hidden{ display:none; }
   .yt-mute{ position:absolute; right:10px; bottom:10px; width:38px; height:38px; border-radius:50%; background:rgba(31,75,58,.92); color:var(--cream); font-size:17px; z-index:2; box-shadow:0 4px 10px rgba(0,0,0,.25); }
   .yt-mute i{ pointer-events:none; }
   .yt-caption{ display:flex; align-items:center; gap:10px; margin-top:12px; color:var(--leaf-dark); font-size:18px; font-weight:600; line-height:1.25; }
@@ -1233,9 +1229,8 @@
         <span class="order-product-tag">આયુર્વેદિક કેપ્સ્યુલ</span>
       </div>
       <h2 class="sub-heading">હર્બલ ડાયબ કેર<br><span>આજે જ ઓર્ડર કરો</span></h2>
-      <p class="order-intro">ઓર્ડર કરવા માટે નીચે તમારું નામ અને મોબાઇલ નંબર ભરો.</p>
+      <p class="order-intro">ઓર્ડર કરવા માટે નીચે તમારું નામ, મોબાઇલ નંબર અને સરનામું ભરો.</p>
       <form class="order-form" id="orderFormEl" novalidate>
-        <p class="order-details-title">તમારી વિગતો</p>
         <div class="field">
           <label for="custName">તમારું પૂરું નામ</label>
           <input type="text" id="custName" name="name" placeholder="તમારું નામ લખો" autocomplete="name" required aria-describedby="nameErr">
@@ -1246,6 +1241,11 @@
           <input type="tel" id="custMobile" name="mobile" placeholder="૧૦ અંકનો મોબાઇલ નંબર" inputmode="numeric" maxlength="10" autocomplete="tel" required aria-describedby="mobileErr">
         </div>
         <span class="err" id="mobileErr" aria-live="polite"></span>
+        <div class="field">
+          <label for="custAddress">તમારું પૂરું સરનામું</label>
+          <input type="text" id="custAddress" name="address" placeholder="તમારું સરનામું લખો" autocomplete="street-address" required aria-describedby="addressErr">
+        </div>
+        <span class="err" id="addressErr" aria-live="polite"></span>
         <button type="submit" class="submit-btn" id="submitBtn">
           <span class="spinner" aria-hidden="true"></span><span class="btn-label">હવે ઓર્ડર કરો</span>
         </button>
@@ -1262,7 +1262,6 @@
     <div class="yt-card">
       <div class="yt-frame">
         <iframe src="https://www.youtube.com/embed/0EsBTsrSNsY?rel=0" title="લોહીમાં શર્કરાના સ્વસ્થ સ્તર અંગેનો વિડિયો ૧" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-        <button class="yt-thumb" type="button" aria-label="પહેલો યુટ્યુબ વિડિયો ચલાવો"><img src="https://i.ytimg.com/vi/0EsBTsrSNsY/hqdefault.avif" alt="પહેલા યુટ્યુબ વિડિયોનું પૂર્વદર્શન"></button>
         <button class="yt-mute" type="button" aria-label="યુટ્યુબ વિડિયોનો અવાજ બંધ કરો"><i class="ti ti-volume-off" aria-hidden="true"></i></button>
       </div>
       <div class="yt-caption"><span class="yt-caption-icon" aria-hidden="true">✦</span><span>ડાયાબિટીસ અંગેની જરૂરી માહિતી</span></div>
@@ -1461,14 +1460,6 @@
       button.setAttribute('aria-label', youtubeIsMuted ? 'યુટ્યુબ વિડિયોનો અવાજ ચાલુ કરો' : 'યુટ્યુબ વિડિયોનો અવાજ બંધ કરો');
     });
   });
-  document.querySelectorAll('.yt-thumb').forEach(thumbnail=>{
-    thumbnail.addEventListener('click', ()=>{
-      const frame = thumbnail.closest('.yt-frame');
-      const youtubeEmbed = frame.querySelector('iframe');
-      thumbnail.classList.add('hidden');
-      youtubeEmbed.src = youtubeEmbed.src.replace('?rel=0', '?autoplay=1&enablejsapi=1&rel=0');
-    });
-  });
 
   // ---------- Show sticky ordering from the start of the second section ----------
   const topBanner = document.getElementById('topBanner');
@@ -1505,8 +1496,10 @@
   // ---------- Order form validation + Google Sheet submit + redirect to Thank You page ----------
   const nameInput = document.getElementById('custName');
   const mobileInput = document.getElementById('custMobile');
+  const addressInput = document.getElementById('custAddress');
   const nameErr = document.getElementById('nameErr');
   const mobileErr = document.getElementById('mobileErr');
+  const addressErr = document.getElementById('addressErr');
   const form = document.getElementById('orderFormEl');
   const submitBtn = document.getElementById('submitBtn');
   const page = document.getElementById('page');
@@ -1528,7 +1521,7 @@
 
   function validateForm(){
     let valid = true;
-    nameErr.textContent = ''; mobileErr.textContent = '';
+    nameErr.textContent = ''; mobileErr.textContent = ''; addressErr.textContent = '';
     const nameVal = nameInput.value.trim();
     const mobileVal = mobileInput.value.trim();
 
@@ -1540,6 +1533,11 @@
     if(!/^[6-9][0-9]{9}$/.test(mobileVal)){
       mobileErr.textContent = 'કૃપા કરીને ૬ થી ૯થી શરૂ થતો સાચો ૧૦ અંકનો મોબાઇલ નંબર લખો';
       if(valid) mobileInput.focus();
+      valid = false;
+    }
+    if(!addressInput.value.trim()){
+      addressErr.textContent = 'કૃપા કરીને તમારું પૂરું સરનામું લખો';
+      if(valid) addressInput.focus();
       valid = false;
     }
     return valid;
@@ -1559,6 +1557,7 @@
     const payload = {
       name: nameInput.value.trim(),
       mobile: mobileInput.value.trim(),
+      address: addressInput.value.trim(),
       timestamp: new Date().toISOString()
     };
 
